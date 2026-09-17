@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>황룡상 침구학술·고증 연구 포털 (Huang Longxiang Scholar)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --bg-card: rgba(17, 24, 39, 0.8);
+      --bg-card-hover: rgba(31, 41, 55, 0.95);
+      --border: #374151;
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --accent: #e11d48;
+      --accent-glow: rgba(225, 29, 72, 0.25);
+      --cyan: #06b6d4;
+      --amber: #f59e0b;
+      --emerald: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.75;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(225, 29, 72, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
+      background-attachment: fixed;
+      padding: 60px 20px 100px;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(225, 29, 72, 0.15);
+      border: 1px solid rgba(225, 29, 72, 0.3);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Noto Serif KR', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .grid-reports {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+
+    .report-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px 26px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .report-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 16px 32px -8px var(--accent-glow);
+      background: var(--bg-card-hover);
+    }
+
+    .card-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .badge-te1 { background: rgba(225, 29, 72, 0.2); color: #fb7185; border: 1px solid rgba(225, 29, 72, 0.4); }
+    .badge-st36 { background: rgba(6, 182, 212, 0.2); color: #38bdf8; border: 1px solid rgba(6, 182, 212, 0.4); }
+
+    .report-card h2 {
+      font-family: 'Noto Serif KR', Georgia, serif;
+      font-size: 1.38rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .report-card p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+      font-size: 0.85rem;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .info-section {
+      background: rgba(17, 24, 39, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 48px;
+    }
+
+    .info-section h3 {
+      font-family: 'Noto Serif KR', Georgia, serif;
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .feature-item {
+      background: rgba(31, 41, 55, 0.5);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 0.88rem;
+      color: #d1d5db;
+    }
+
+    .feature-item strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      padding-top: 30px;
+    }
+
+    footer a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <header>
+      <div class="tag">HUANG LONGXIANG SCHOLAR · RESEARCH PORTAL</div>
+      <h1>황룡상 침구학술·고증 연구 포털</h1>
+      <p class="subtitle">
+        중국 침구학술사 최고 권위자인 황룡상(黃龍祥) 교수의 문헌고증학·실증주의 방법론과 현대 신경해부생리학을 융합한 전문 학술 분석 보고서 아카이브입니다.
+      </p>
+    </header>
+
+    <div class="grid-reports">
+      
+      <!-- Report 1: TE1 Guanchong -->
+      <a href="reports/guanchong-bloodletting-analysis.html" class="report-card">
+        <div>
+          <span class="card-badge badge-te1">NEW REPORT · 2026-09-17</span>
+          <h2>관충혈(關衝·TE1) 점자출혈의 문헌 층차와 신경혈관 조절 기전</h2>
+          <p>
+            《소문·무자론》과 당대 《견권침경》의 '자혈출, 승기침(刺血出, 勝氣針)'을 고증하고, 단순 호침 대비 점자출혈이 유발하는 자율신경계 급속 리셋(교감 서지 ➔ 미주 리바운드) 및 동정맥문합(AVA) 미세순환 감압 기전을 규명합니다.
+          </p>
+        </div>
+        <div class="card-footer">
+          <span>보고서 전문 열람하기</span>
+          <span>→</span>
+        </div>
+      </a>
+
+      <!-- Report 2: ST36 Zusanli -->
+      <a href="reports/st36-analysis.html" class="report-card">
+        <div>
+          <span class="card-badge badge-st36">ARCHIVE REPORT</span>
+          <h2>ST36(足三里)의 해부학적 위치에 따른 주치증 분석</h2>
+          <p>
+            황룡상 학술 프레임워크의 문헌 층차주의와 해부학적 실증 정혈 관점을 적용하여 ST36의 국소 근골격계 주치와 족양명 합혈 체표-내장 원위 조절 기전을 분리 고증한 보고서입니다.
+          </p>
+        </div>
+        <div class="card-footer">
+          <span>보고서 전문 열람하기</span>
+          <span>→</span>
+        </div>
+      </a>
+
+    </div>
+
+    <section class="info-section">
+      <h3>🏛️ 황룡상 학술 분석 3대 핵심 프로토콜</h3>
+      <div class="feature-list">
+        <div class="feature-item">
+          <strong>1단계: 분석 (Historical)</strong>
+          선진 출토 백서·죽간 ➔ 《명당경》 ➔ 《갑을경》 ➔ 당송명청 문헌 층차 추적.
+        </div>
+        <div class="feature-item">
+          <strong>2단계: 평가 (Critical)</strong>
+          후대 전사 오류 및 사변적 오행 조작 비판, 혈위·자구법·주치의 삼위일체 검증.
+        </div>
+        <div class="feature-item">
+          <strong>3단계: 기술 (Definitive)</strong>
+          동태적 체위 표준 정위, 본래 주치 배오, 현대 신경생리학 및 혈류역학 실증 통합.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        GitHub Repository: <a href="https://github.com/jaehyokim-sketch/huanglongxiang-scholar" target="_blank" rel="noopener">jaehyokim-sketch/huanglongxiang-scholar</a> | 
+        <a href="https://github.com/jaehyokim-sketch/huanglongxiang-scholar/blob/main/skill/SKILL.md" target="_blank" rel="noopener">황룡상 스킬 가이드 (SKILL.md)</a>
+      </p>
+      <p style="margin-top: 8px;">© 2026 Huang Longxiang Scholarly Research Portal. Powered by GitHub Pages.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

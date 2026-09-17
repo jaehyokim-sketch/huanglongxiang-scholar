@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>관충혈(關衝·TE1) 점자출혈의 문헌 층차와 신경혈관 조절 기전 | 황룡상 학술 보고서</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-surface: #1e293b;
+      --bg-card: rgba(30, 41, 59, 0.85);
+      --bg-card-hover: rgba(51, 65, 85, 0.95);
+      --border: #334155;
+      --border-accent: rgba(225, 29, 72, 0.4);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --crimson: #e11d48;
+      --crimson-light: #f43f5e;
+      --crimson-glow: rgba(225, 29, 72, 0.25);
+      --amber: #f59e0b;
+      --amber-soft: rgba(245, 158, 11, 0.15);
+      --cyan: #06b6d4;
+      --cyan-soft: rgba(6, 182, 212, 0.12);
+      --emerald: #10b981;
+      --emerald-soft: rgba(16, 185, 129, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(225, 29, 72, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* Header Styling */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    .badge-wrap {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-crimson {
+      background: rgba(225, 29, 72, 0.18);
+      color: var(--crimson-light);
+      border: 1px solid var(--border-accent);
+    }
+
+    .badge-cyan {
+      background: var(--cyan-soft);
+      color: var(--cyan);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .badge-amber {
+      background: var(--amber-soft);
+      color: var(--amber);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    h1 {
+      font-family: 'Noto Serif KR', Georgia, serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    h1 span.hanja {
+      color: var(--crimson-light);
+      font-weight: 700;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      line-height: 1.7;
+      max-width: 900px;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 32px;
+      margin-top: 28px;
+      padding: 16px 20px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .meta-item strong {
+      color: var(--text);
+      margin-right: 6px;
+    }
+
+    /* Section & Content */
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-family: 'Noto Serif KR', Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-left: 4px solid var(--crimson);
+      padding-left: 14px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--cyan);
+      margin: 32px 0 14px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #cbd5e1;
+    }
+
+    /* Cards & Grids */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(225, 29, 72, 0.4);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-crimson { border-top: 3px solid var(--crimson); }
+    .card-cyan { border-top: 3px solid var(--cyan); }
+    .card-amber { border-top: 3px solid var(--amber); }
+    .card-emerald { border-top: 3px solid var(--emerald); }
+
+    /* Quotes and Ancient Texts */
+    .quote-box {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(225, 29, 72, 0.3);
+      border-left: 5px solid var(--crimson);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+
+    .quote-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--crimson-light);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .quote-text {
+      font-family: 'Noto Serif KR', Georgia, serif;
+      font-size: 1.08rem;
+      line-height: 1.8;
+      color: #f1f5f9;
+      margin-bottom: 10px;
+    }
+
+    .quote-trans {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+      line-height: 1.6;
+    }
+
+    /* Table Styling */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 28px 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-card);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.94rem;
+    }
+
+    th {
+      background: rgba(30, 41, 59, 0.95);
+      color: #ffffff;
+      padding: 16px 20px;
+      font-weight: 600;
+      border-bottom: 2px solid var(--border);
+    }
+
+    td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(51, 65, 85, 0.3); }
+
+    /* Mechanism Flow Diagram (Pure CSS/HTML) */
+    .flow-container {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      margin: 32px 0;
+    }
+
+    .flow-row {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .flow-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+
+    .flow-step {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .flow-step.active {
+      border-color: var(--crimson);
+      box-shadow: 0 0 20px var(--crimson-glow);
+    }
+
+    .step-num {
+      position: absolute;
+      top: -12px;
+      left: 16px;
+      background: var(--crimson);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+
+    .flow-step h5 {
+      font-size: 1rem;
+      color: #ffffff;
+      margin: 8px 0 6px;
+    }
+
+    .flow-step p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Highlights & Tags */
+    .highlight-term {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .strong-crimson {
+      color: var(--crimson-light);
+      font-weight: 600;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+      color: #cbd5e1;
+    }
+
+    li { margin-bottom: 8px; }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(51, 65, 85, 0.6);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      color: #f1f5f9;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+      margin-top: 80px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: var(--cyan);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .disclaimer {
+      background: rgba(30, 41, 59, 0.5);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      border-left: 3px solid var(--amber);
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Top Navigation / Back to Home -->
+    <nav style="margin-bottom: 32px;">
+      <a href="../index.html" style="color: var(--cyan); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;">
+        ← 연구 포털 메인으로 돌아가기
+      </a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <div class="badge-wrap">
+        <span class="badge badge-crimson">황룡상 침구학술사 프레임워크</span>
+        <span class="badge badge-cyan">신경혈관 미세순환 생리학</span>
+        <span class="badge badge-amber">3단계 고증 프로토콜</span>
+      </div>
+      <h1>관충혈<span class="hanja">(關衝·TE1)</span> 점자출혈의<br>문헌 층차와 신경혈관 조절 기전</h1>
+      <p class="lead">
+        수소양삼초경의 정혈인 관충혈에서 시행되는 삼릉침 점자출혈(點刺出血)의 고대 원시 문헌 층차(《소문·무자론》, 《견권침경》)를 고증하고, 단순 호침 자침(氣針/微通)과 비교하여 자율신경계 급속 리셋 및 동정맥문합(AVA) 미세순환 감압 기전을 정밀 분석합니다.
+      </p>
+      
+      <div class="meta-bar">
+        <div class="meta-item"><strong>대상 혈위:</strong> 關衝 (TE1, 手少陽三焦經 井金穴)</div>
+        <div class="meta-item"><strong>비교 시술:</strong> 삼릉침 점자출혈(血針·强通) vs 호침 자침(氣針·微通)</div>
+        <div class="meta-item"><strong>분석 일자:</strong> 2026-09-17</div>
+        <div class="meta-item"><strong>고증 DB:</strong> 《침구수혈통고》, 《중국침구학술사대강》, 《신고전침구학대강》</div>
+      </div>
+    </header>
+
+    <!-- Section 1: Executive Summary -->
+    <section>
+      <h2>0. 핵심 요약 (Executive Summary)</h2>
+      <div class="grid-2">
+        <div class="card card-crimson">
+          <h4>🩸 문헌적 원형: 낙맥의 사열을 사하는 구급 방혈</h4>
+          <p>관충혈은 후대에 기계적으로 12경맥 시작점으로 배속되기 이전, 선진~한대 《소문·무자론》에서 <strong>"수소양 낙맥의 사열로 인한 급성 인후폐색(喉痹)·설권·심번"</strong>을 치료하기 위해 말초 혈락을 점자출혈(去端如韭葉各一痏)하던 원시 구급 처방이었습니다.</p>
+        </div>
+        <div class="card card-cyan">
+          <h4>⚡ 자율신경계 반응: 교감 서지 ➔ 미주/부교감 리바운드</h4>
+          <p>손가락 말단의 초고밀도 침해수용체(Aδ/C 섬유) 자극은 대뇌 감각 호문쿨루스를 강타하여 <strong>순간적인 교감신경 서지(Surge)로 의식을 각성(開竅)시킨 뒤, 급격한 미주신경 반사성 보상(Vagal Rebound)</strong>을 유도하여 시상하부(POAH) 발열 셋포인트를 하향 재설정합니다.</p>
+        </div>
+        <div class="card card-emerald">
+          <h4>🔄 동정맥문합(AVA) 개방 & 두면부 울혈 분산</h4>
+          <p>손끝 진피층에 밀집된 체온·혈류 조절 밸브인 <strong>동정맥문합(AVA, 사구체)</strong>을 동태적으로 개방하여 전신 말초 저항을 재조정하고, 두면·인후부에 집중된 고압의 염증성 혈류를 사지 말단으로 신속히 분산(혈류 재분배)시킵니다.</p>
+        </div>
+        <div class="card card-amber">
+          <h4>🚿 물리적 감압(Decompression) & 염증 매개체 배출</h4>
+          <p>단순 호침은 국소 압력을 해소하지 못하지만, 점자출혈은 소량(1~3방울)의 혈액을 배출함으로써 <strong>병리적으로 상승한 미세혈관 내압을 즉각 감압하고, 정체된 브라디키닌·젖산·염증성 사이토카인을 물리적으로 씻어냅니다(Washout).</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Step 1 Historical & Textual Analysis -->
+    <section>
+      <h2>1. [1단계: 분석] 관충혈과 점자출혈의 문헌 층차 고증</h2>
+
+      <h3>1.1 혈명(穴名)의 어원과 맥기(脈氣) 발생학</h3>
+      <p>
+        황룡상 교수의 경혈 발생학 고증에 따르면, 혈명에 <strong class="strong-crimson">'충(衝)'</strong> 자가 포함된 혈위(關衝, 中衝, 少衝, 太衝, 氣衝 등)는 고대 의가들이 <strong>체표에서 혈기와 맥동이 강렬하게 솟구치고 분출하는 관문이자 맥구(脈口)</strong>로 관찰한 부위입니다.
+      </p>
+      <ul>
+        <li><strong>관(關):</strong> 인체 기기(氣機)와 사열(邪熱)이 출입하고 통과하는 결정적 관문.</li>
+        <li><strong>충(衝):</strong> 양기와 혈액이 맥동하며 강하게 충동(衝動)하는 요충지.</li>
+      </ul>
+
+      <div class="quote-box">
+        <div class="quote-title">《황제내경·소문》 〈무자론(繆刺論)〉 원문 고증</div>
+        <div class="quote-text">
+          "邪客於手少陽之絡，令人喉痹舌卷，口乾心煩，臂外廉痛，手不及頭，刺手中指次指爪甲上，去端如韭葉各一痏，壯者立已，老者三日知。"
+        </div>
+        <div class="quote-trans">
+          <strong>[고증 역해]:</strong> 사기가 수소양의 낙맥에 침범하여 인후가 막히고(喉痹), 혀가 말리며, 입이 마르고 가슴이 답답하며(心煩), 팔 가쪽이 아파 손이 머리에 닿지 않을 때는, <strong>가운데손가락 다음 손가락(넷째 손가락) 손톱 모서리 부추잎만큼 떨어진 곳[關衝]을 찔러 피를 한 번 내면[一痏]</strong>, 건강한 자는 즉시 낫고 노인은 3일이면 안다.
+        </div>
+      </div>
+
+      <h3>1.2 11경맥에서 12경맥으로의 진화와 주치 층차</h3>
+      <p>
+        마왕퇴 출토 백서 《족비십일맥구경》에서 수소양맥의 전신인 <strong>'비소양맥(臂少陽脈)'</strong>은 "무명지 끝(出于無名指端, 관충의 원형)"에서 시작하여 귀(耳)로 진입하며 <code>이롱(耳聾)</code>, <code>협통(頰痛)</code>을 주치한다고 명시했습니다.
+      </p>
+      <p>
+        이후 《황제명당경》 편자가 《소문·무자론》의 원방을 수소양삼초경의 정혈인 <strong>'관충(關衝)'</strong>에 귀속시키면서, 관충혈은 단순한 손가락 끝 경혈이 아니라 <strong>두면부 및 인두부의 급성 열성 울혈을 사(瀉)하는 전신 구급혈</strong>로 확립되었습니다.
+      </p>
+
+      <h3>1.3 견권(甄權)의 선언: "자혈출, 승기침(刺血出, 勝氣針)"</h3>
+      <div class="quote-box">
+        <div class="quote-title">당대 《견권침경(甄權針經)》 (《외대비요》 권19 인용)</div>
+        <div class="quote-text">
+          "以三稜針刺之，令血出，勝氣針。所以勝氣針者，此脈脹腮之候，腮中有氣，人不能食。故刺出血，以宣諸臟也。"
+        </div>
+        <div class="quote-trans">
+          <strong>[학술적 의의]:</strong> 당대 명의 견권은 정혈에서 삼릉침으로 피를 내는 자혈법(血針)이 단순 호침(氣針)보다 질적으로 우월함을 임상적으로 입증했습니다. 이는 울체된 병리적 압력과 열사를 체외로 방출하여 오장육부의 기기를 즉각 선통(宣通)시키는 원리입니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Step 2 Critical Historiographical Evaluation -->
+    <section>
+      <h2>2. [2단계: 평가] 단순 자침 vs 점자출혈의 다차원 비교 평가</h2>
+      <p>
+        황룡상 교수가 강조하는 <strong>"혈위·자구법·주치의 삼위일체(三位一體) 법칙"</strong>에 따르면, 혈위의 고유 효능은 시술 도구(호침 vs 삼릉침)와 자극 방식(유침 vs 방혈)에 따라 전혀 다른 생체 반응을 유도합니다.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>비교 항목</th>
+              <th>단순 자침 (호침 / 氣針 / 微通)</th>
+              <th>점자출혈 (삼릉침 / 血針 / 强通)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>자극의 물리적 성격</strong></td>
+              <td>기계적 전단력(Shear stress), 지속성 자극</td>
+              <td><strong>초고강도 순간 파괴 + 미세조직 파열 및 소량 방혈</strong></td>
+            </tr>
+            <tr>
+              <td><strong>활성화 수용체</strong></td>
+              <td>저역치 Aβ 기계수용체, 일부 Aδ 섬유</td>
+              <td><strong>고역치 침해수용체(High-threshold Aδ & C 섬유)</strong> 폭발적 흥분</td>
+            </tr>
+            <tr>
+              <td><strong>국소 미세순환</strong></td>
+              <td>축삭반사(Axon reflex)로 완만한 혈관 확장</td>
+              <td><strong>동정맥문합(AVA) 전면 개방 + 미세혈관 즉각 감압(Decompression)</strong></td>
+            </tr>
+            <tr>
+              <td><strong>자율신경계 반응</strong></td>
+              <td>완만한 교감-부교감 밸런스 조절, 엔도르핀 방출</td>
+              <td><strong>순간적 교감 Surge(각성) ➔ 미주/부교감 Rebound(해열)</strong></td>
+            </tr>
+            <tr>
+              <td><strong>염증 물질 동태</strong></td>
+              <td>국소 대사 촉진 및 순환 개선</td>
+              <td><strong>정체된 염증인자(사이토카인, 브라디키닌, 젖산) 물리적 배출</strong></td>
+            </tr>
+            <tr>
+              <td><strong>대표 적응증</strong></td>
+              <td>만성 기능 장애, 경락 순경통, 기기 조율(調氣)</td>
+              <td><strong>급성 인후폐색(喉痹), 고열 불한, 쇼크, 뇌혈류 장애(瀉熱開竅)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 4: Step 3 Definitive Neurovascular Description -->
+    <section>
+      <h2>3. [3단계: 기술] 신경혈관생리학적 정밀 조절 메커니즘</h2>
+
+      <!-- Flowchart -->
+      <div class="flow-container">
+        <h4 style="color: #ffffff; margin-bottom: 24px; text-align: center; font-size: 1.15rem;">
+          [ 관충혈 점자출혈의 3단계 생체 반응 연쇄 흐름도 ]
+        </h4>
+        <div class="flow-row">
+          <div class="flow-step active">
+            <span class="step-num">STEP 1</span>
+            <h5>초고밀도 신경 투사</h5>
+            <p>손끝 조갑각의 무수한 자유신경종말 자극 ➔ 대뇌 감각 호문쿨루스 극대 영역 활성화 ➔ 척수 후각 ➔ 뇌간 망상체 직행</p>
+          </div>
+          <div class="flow-step active">
+            <span class="step-num">STEP 2</span>
+            <h5>자율신경계 급속 리셋</h5>
+            <p>순간적 교감신경 서지(각성) ➔ NTS 매개 미주신경 반사성 리바운드 작동 ➔ 시상하부(POAH) 발열 셋포인트 즉각 하향</p>
+          </div>
+          <div class="flow-step active">
+            <span class="step-num">STEP 3</span>
+            <h5>미세순환 감압 & 분산</h5>
+            <p>AVA(사구체) 밸브 전면 개방 ➔ 두면·인후부 울혈 말초 분산 ➔ 미세혈관 과압 해소 및 염증 매개체 체외 배출</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>3.1 체성-자율신경 반사(Somatic-Autonomic Reflex)와 해열 기전</h3>
+      <p>
+        손가락 말단(Finger pulp 및 조갑각 주위)은 인체 체표 중 <strong>단위 면적당 유해수용체와 촉각소체의 밀도가 가장 높은 부위</strong>로, 대뇌 일차 체성감각 피질(Primary Somatosensory Cortex)의 <span class="highlight-term">펜필드 호문쿨루스(Penfield Homunculus)</span>에서 압도적인 면적을 차지합니다.
+      </p>
+      <ul>
+        <li><strong>교감신경 서지(Sympathetic Surge)와 개규성신(開竅醒神):</strong> 삼릉침의 순간적 천자는 고역치 Aδ/C 섬유를 동시 흥분시켜 뇌간 망상체(Reticular Formation)와 청반핵(Locus Coeruleus)을 강력히 자극하여 의식 장애나 혈역학적 저하 상태를 즉각 각성시킵니다.</li>
+        <li><strong>미주신경 반사성 리바운드(Vagal Rebound)와 POAH 재설정:</strong> 고강도 침해 자극 직후, 연수 고속도로핵(NTS)과 시상하부 자율신경 조절 중추에서는 과도한 교감 흥분을 상쇄하기 위해 <strong class="strong-crimson">강력한 부교감/미주신경성 보상 흥분(Vagal Rebound)</strong>을 유발합니다. 이는 시상하부 전시각야(POAH)의 체온 셋포인트를 하향 조정하여 말초 발한과 열 방출을 유도합니다.</li>
+      </ul>
+
+      <h3>3.2 동정맥문합(AVA, Arteriovenous Anastomosis)과 혈류 재분배</h3>
+      <p>
+        손가락 끝 정혈 부위 진피층에는 세동맥과 세정맥이 모세혈관망을 거치지 않고 직접 연결되는 특수 혈관 구조체인 <span class="highlight-term">동정맥문합(AVA / 호이어-그로서 사구체, Glomus Body)</span>이 초고밀도로 분포합니다.
+      </p>
+      <ul>
+        <li><strong>말초 혈관 저항(TPR)의 급변:</strong> 점자출혈 시 유발되는 신경-혈관 반사는 사지 말단의 AVA를 강제로 개방시켜 말초 혈관 저항을 급격히 떨어뜨립니다.</li>
+        <li><strong>두면부 울혈의 말초 분산(Steal Effect / Hemodynamic Redistribution):</strong> 급성 인두염·편도염으로 인해 두면부와 인두 혈관에 고압으로 집중되어 있던 염증성 혈류가 사지 말단으로 급속 분산되면서, 목구멍의 종창(Swelling)과 통증이 극적으로 경감됩니다.</li>
+      </ul>
+
+      <h3>3.3 물리적 미세혈관 감압(Decompression)과 염증인자 세척(Washout)</h3>
+      <div class="grid-2">
+        <div class="card card-crimson">
+          <h4>📉 유체정역학적 내압 즉각 해소</h4>
+          <p>급성 염증 부위의 모세혈관은 투과성 증가로 인해 혈관내압(Intravascular Pressure)과 간질액 압력이 극도로 상승해 있습니다. 1~3방울의 점자방혈은 <strong>울혈된 미세순환계의 병리적 과압을 물리적으로 개방·감압(Decompression)</strong>합니다.</p>
+        </div>
+        <div class="card card-amber">
+          <h4>🧪 통각 유발 물질의 직접 배출 (Washout)</h4>
+          <p>미세순환계에 정체되어 신경말단을 과민화시키던 <strong>고농도의 브라디키닌(Bradykinin), Substance P, 젖산(Lactate), 세포외 K⁺ 이온, 염증성 사이토카인(TNF-α, IL-1β)</strong>이 혈액과 함께 체외로 씻겨 나가 통증 신호가 차단됩니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Clinical Recommendations -->
+    <section>
+      <h2>4. 학술적 임상 운용 및 안전성 기준</h2>
+      <div class="grid-3">
+        <div class="card card-cyan">
+          <h4>📍 정확한 정위 (Standard Position)</h4>
+          <p>무명지(넷째 손가락) 말절 척측(새끼손가락 쪽), 손톱 뿌리 모서리에서 약 0.1촌(2mm) 떨어진 조갑각 함요부.</p>
+        </div>
+        <div class="card card-crimson">
+          <h4>⚡ 시술 수기 (Technique)</h4>
+          <p>철저한 소독 후 일회용 란셋/삼릉침으로 1~2mm 깊이로 신속히 점자한 뒤, 가볍게 압박하여 1~3방울 방혈 후 지혈.</p>
+        </div>
+        <div class="card card-emerald">
+          <h4>🎯 핵심 적응증 (Indications)</h4>
+          <p>급성 편도선염·인두염으로 인한 극심한 인후통, 외감 고열 불한, 급성 두통, 뇌혈류 장애성 현훈 및 급성 혼미.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: References -->
+    <section>
+      <h2>5. 학술 근거 문헌 및 원전 출전</h2>
+      <ul>
+        <li><strong>황룡상(黃龍祥):</strong> 《中國針灸學術史大綱》 (화하출판사) — 제2부 경락부 & 제3부 침자자구법의 층차 변천</li>
+        <li><strong>황룡상(黃龍祥):</strong> 《針灸腧穴通考》 (인민위생출판사) — 수소양삼초경 관충혈(關衝) 정위 및 고전 주치 변천 고증</li>
+        <li><strong>황룡상(黃龍祥):</strong> 《新古典針灸學大綱》 — 혈위·자구법·주치의 일체성 및 현대 신경해부학적 실증론</li>
+        <li><strong>선진~한대 원전:</strong> 《黃帝內經·素問》 〈繆刺論〉, 《黃帝內經·靈樞》 〈本輸〉, 마왕퇴 백서 《足臂十一脈灸經》</li>
+        <li><strong>수당대 원전:</strong> 당·견권 《甄權針經》, 당·왕도 《外臺秘要》 권19, 송·《太平聖惠方》 권99</li>
+        <li><strong>현대 신경혈관생리학:</strong> Penfield Sensory Homunculus, Somato-autonomic Reflex Mechanisms (NTS-POAH axis), Glomus Body & AVA Hemodynamics</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-links">
+        <a href="../index.html">🏠 연구 포털 메인</a>
+        <a href="st36-analysis.html">📄 ST36(족삼리) 해부학적 분석 보고서</a>
+        <a href="https://github.com/jaehyokim-sketch/huanglongxiang-scholar" target="_blank" rel="noopener">💻 GitHub 저장소</a>
+        <a href="https://github.com/jaehyokim-sketch/huanglongxiang-scholar/blob/main/skill/SKILL.md" target="_blank" rel="noopener">📚 황룡상 학술 프레임워크 (SKILL.md)</a>
+      </div>
+      <p>본 보고서는 황룡상 침구학술사 프레임워크 및 현대 신경혈관생리학 마스터 DB를 기반으로 자동 생성된 학술 분석 보고서입니다.</p>
+      
+      <div class="disclaimer">
+        <strong>⚠️ 학술 연구용 안내:</strong> 본 문서는 고전문헌 고증 및 신경생리학적 메커니즘을 분석하기 위한 학술 자료이며, 의료 행위를 위한 직접적인 처방이나 치료 지침이 아닙니다. 모든 침구 및 침습적 시술은 면허를 갖춘 한의사/의료인에 의해 수행되어야 합니다.
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
