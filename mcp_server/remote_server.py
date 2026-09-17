@@ -23,9 +23,10 @@ if sys.platform == "win32":
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description="Remote Huang Longxiang MCP Server via GitHub")
-parser.add_argument("--repo", type=str, default=os.getenv("GITHUB_REPO", ""), help="GitHub Repository (e.g. owner/huanglongxiang-scholar)")
+parser.add_argument("--repo", type=str, default=os.getenv("GITHUB_REPO", "jaehyokim-sketch/huanglongxiang-scholar"), help="GitHub Repository (default: jaehyokim-sketch/huanglongxiang-scholar)")
 parser.add_argument("--branch", type=str, default=os.getenv("GITHUB_BRANCH", "main"), help="Git Branch (default: main)")
-parser.add_argument("--token", type=str, default=os.getenv("GITHUB_TOKEN", ""), help="GitHub Personal Access Token (for private repos)")
+parser.add_argument("--token", type=str, default=os.getenv("GITHUB_TOKEN", ""), help="GitHub Personal Access Token (optional for public repos)")
+
 
 args, unknown = parser.parse_known_args()
 

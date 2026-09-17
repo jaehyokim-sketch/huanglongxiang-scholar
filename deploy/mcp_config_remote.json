@@ -3,13 +3,11 @@
     "huanglongxiang-scholar-remote": {
       "command": "python",
       "args": [
-        "<PATH_TO_REMOTE_SERVER_PY>/remote_server.py",
+        "<PATH_TO_FILE>/remote_server.py",
         "--repo",
         "jaehyokim-sketch/huanglongxiang-scholar",
         "--branch",
-        "main",
-        "--token",
-        "<OPTIONAL_GITHUB_PAT_FOR_PRIVATE_REPO>"
+        "main"
       ],
       "env": {
         "PYTHONIOENCODING": "utf-8"
@@ -17,4 +15,3 @@
     }
   }
 }
-
