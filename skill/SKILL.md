@@ -83,14 +83,14 @@ MCP 서버 `huanglongxiang-scholar` 가 등록되어 있으면 아래 도구로 
 | `get_scholar_framework` | 5대 공리 + 3단계 프로토콜 지침 반환 | - |
 
 ### 4-2. 로컬 원문 파일 (MCP 미가동 시 대체 경로)
-루트: clone 받은 저장소 최상위 디렉토리 (본 PC 기준 `D:\도서 번역_도서_번역_및_원전\황룡상\`)
+루트: clone 받은 저장소 최상위 디렉토리 (본 PC 기준 `D:/도서 번역/01_도서_번역_및_원전/황룡상/`)
 
 - `황룡상_4대명저_통합_마스터_parsed.md` — 4대 명저 통합본
 - `황룡상_교수_논문집_전체_parsed.md` — 42편 논문 전수
 - `中国针灸学术史大纲_parsed.md` — 중국침구학술사대강
 - `경맥이론의 발견과 재해석_parsed.md` — 출토문헌 11/12경맥 진화
 - `신고전 침구학대강_parsed.md` / `중국고전 침구학대강_parsed.md`
-- `논문_parsed\` — 논문 개별 파일, `chunks_refined\` — 검색용 청크
+- `논문_parsed/` — 논문 개별 파일, `chunks_refined/` — 검색용 청크
 
 원격 저장소: https://github.com/jaehyokim-sketch/huanglongxiang-scholar (Public)
 

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TE1(关冲) 점자출혈의 문헌 층차와 기전 분석</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5d6b75;
+      --paper: #f7f4ed;
+      --panel: #fffdf8;
+      --line: #d9d2c4;
+      --accent: #a4472b;
+      --accent-soft: #f1ded5;
+      --blue: #24566b;
+      --blue-soft: #e4edf1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.75;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 56px 24px 80px; }
+    header { border-bottom: 1px solid var(--line); padding-bottom: 34px; }
+    .eyebrow { color: var(--accent); font-size: .82rem; font-weight: 700; letter-spacing: .12em; }
+    h1 { max-width: 760px; margin: 12px 0 16px; font-family: Georgia, "Noto Serif KR", serif; font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.14; font-weight: 700; }
+    .lead { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 22px; color: var(--muted); font-size: .9rem; }
+    section { padding: 34px 0; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0 0 16px; color: var(--blue); font-size: 1.45rem; }
+    h3 { margin: 26px 0 8px; font-size: 1.05rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0; }
+    .card { padding: 20px; background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--accent); }
+    .card strong { display: block; margin-bottom: 6px; color: var(--accent); }
+    .callout { margin: 22px 0; padding: 20px 22px; background: var(--accent-soft); border-left: 4px solid var(--accent); }
+    .callout.cool { background: var(--blue-soft); border-left-color: var(--blue); }
+    blockquote { margin: 18px 0; padding: 16px 20px; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--blue); }
+    blockquote p.han { margin: 0 0 8px; font-family: "Noto Serif KR", Batang, serif; font-size: 1.02rem; letter-spacing: .01em; }
+    blockquote p.tr { margin: 0 0 6px; }
+    blockquote cite { display: block; color: var(--muted); font-size: .86rem; font-style: normal; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: .94rem; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--blue-soft); color: var(--blue); font-weight: 700; }
+    td.k { background: var(--panel); font-weight: 600; }
+    .tag { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: .74rem; font-weight: 700; letter-spacing: .02em; vertical-align: 2px; }
+    .tag.src { background: #e4edf1; color: #24566b; border: 1px solid #b8cdd6; }
+    .tag.out { background: #f3ece2; color: #8a6a3a; border: 1px solid #ddcbb0; }
+    .tag.warn { background: #f7e3dd; color: #a4472b; border: 1px solid #e4bfb3; }
+    ul, ol { padding-left: 22px; }
+    li { margin: 6px 0; }
+    a { color: var(--blue); text-underline-offset: 3px; }
+    code { padding: 2px 6px; background: #ebe5d9; border-radius: 3px; font-size: .92em; }
+    footer { padding-top: 28px; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 700px) {
+      main { padding: 34px 18px 56px; }
+      .grid { grid-template-columns: 1fr; }
+      table { font-size: .88rem; }
+      th, td { padding: 8px 9px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">HUANGLONGXIANG SCHOLARLY REPORT · 2026-09-17</div>
+      <h1>关冲(TE1) 점자출혈은 무엇을 자극하는가</h1>
+      <p class="lead">
+        "삼초경의 시작점인 관충혈은 급성 인후통·고열·응급 상황에서 삼릉침 점자출혈을 시행한다"는 통설을,
+        황룡상 교수의 문헌 층차주의로 해체한 뒤 자율신경·말초혈류 기전 층위에서 재구성한다.
+        결론부터 말하면, 이 시술의 원형은 <strong>'관충이라는 혈(穴)을 찌르는 것'이 아니라 '사말(四末)의 혈락(血絡)을 찌르는 것'</strong>이며,
+        단순 자침과의 실질적 차이도 "피를 뺀다"가 아니라 <strong>표적 조직이 혈관벽과 그 주위 교감신경총이라는 점</strong>에 있다.
+      </p>
+      <div class="meta">
+        <span>분석 프레임: 황룡상 3단계 프로토콜 [분석 → 평가 → 기술]</span>
+        <span>근거: 황룡상 저작 코퍼스 고유분 약 199.5만 자 — 《중국침구학술사대강》·《경맥이론의 발견과 재해석》 (MCP <code>huanglongxiang-scholar</code>)</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>0. 핵심 결론 요약</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>① 喉痹는 혈위 주치가 아니다</strong>
+          관충의 인후통 주치는 《素問·繆刺論》의 <em>낙맥(絡脈) 자법</em> 처방에서 왔고, 《明堂經》 편자가 이를 수소양 정혈 '관충' 아래로 재배치한 것이다. 처음부터 <em>점(穴)</em>이 아니라 <em>낙(絡)</em>에 대한 시술이었다.
+        </div>
+        <div class="card">
+          <strong>② 高熱 주치는 편집 사고 혐의</strong>
+          관충의 '열병·번심' 주치는 《千金要方·孔穴主對法》의 다혈(多穴) 합편 체례를 후대가 오독하면서 증폭됐을 가능성이 크다. 황룡상이 직접 지목한 대표적 오류 사례의 혈 목록에 관충이 들어 있다.
+        </div>
+        <div class="card">
+          <strong>③ 차이는 '출혈량'이 아니다</strong>
+          수 방울의 사혈은 전신 혈류역학을 바꾸지 못한다. 점자출혈과 단순 자침의 차이는 <em>자극 강도·표적 조직(혈관벽)·축삭반사 개시</em>에 있으며, 이는 황룡상의 "경맥이론은 혈맥에서 나와 혈맥으로 돌아간다"는 명제와 정확히 맞물린다.
+        </div>
+      </div>
+      <p>
+        <span class="tag src">코퍼스 근거</span>는 황룡상 저작 DB에서 실제 검색된 원문에 기반한 서술,
+        <span class="tag out">코퍼스 외</span>는 현대 해부·생리학 일반 지식에 기반한 서술,
+        <span class="tag warn">미확인</span>은 황룡상 저작 내에서 근거를 찾지 못한 항목이다.
+      </p>
+    </section>
+
+    <section>
+      <h2>1단계 · 분석 (Historical &amp; Textual Analysis)</h2>
+
+      <h3>1-1. 관충의 최초 층위 — '무명지 말단'은 혈명이 아니라 맥의 기점</h3>
+      <p><span class="tag src">코퍼스 근거</span> 마왕퇴 백서 단계에서 이 부위는 '관충혈'이 아니라 <strong>비소양맥(臂少陽脈)이 나오는 자리</strong>였고, 그 병후는 인후통이 아니라 <strong>귀와 뺨</strong>이었다.</p>
+      <blockquote>
+        <p class="han">臂少陽脈：出於無名指端（關衝穴），循臂兩骨之間，上骨下廉，上行至耳。</p>
+        <p class="tr">비소양맥은 무명지 끝(관충혈 자리)에서 나와 팔의 두 뼈 사이를 따라 올라가 귀에 이른다.</p>
+        <cite>《足臂十一脈》 — 황룡상 《중국침구학술사대강》 경락부 인용·串解</cite>
+      </blockquote>
+      <blockquote>
+        <p class="han">耳脈：起於手背，出臂外兩骨之間，上骨下廉，出肘中，入耳中。是動則病耳聾……</p>
+        <p class="tr">이맥은 손등에서 일어나 팔 바깥 두 뼈 사이로 나와 팔꿈치를 거쳐 귀 속으로 들어간다. 이 맥이 동하면 이롱(耳聾)을 앓는다.</p>
+        <cite>《陰陽十一脈》 — 이 맥의 이름 자체가 '귀의 맥(耳脈)'이었다</cite>
+      </blockquote>
+      <p>표본(標本) 체계에서도 관충은 수소양의 <strong>본(本)</strong>부에 속하고, 그 <strong>표(標)</strong>는 "이후상각(耳後上角)·목외자(目外眥)"다. 고전적 원위 대응은 <strong>손끝 ↔ 귀·눈초리</strong>이지 손끝 ↔ 인후가 아니다. 황룡상의 역대 취혈 통계표(表5-3·5-4)에서도 관충은 <strong>이질(耳疾) 원위취혈</strong> 항목에 송대 이전 2회로 집계된다.</p>
+
+      <h3>1-2. '衝'자 고증 — 정혈은 애초에 '맥이 뛰는 곳'으로 인식되었다</h3>
+      <p><span class="tag src">코퍼스 근거</span> 이 지점이 질문의 혈류 문제와 직결된다. 황룡상은 혈명의 문자학적 고증에서 '衝'자 계열 혈명이 모두 <strong>동맥(動脈) 부위</strong>를 가리킨다고 못 박는다.</p>
+      <blockquote>
+        <p class="han">《方言》曰：「衝，動也」…… 以「衝」字命名穴皆當「動脈中」，即所謂「動輸」，如「氣衝」、「衝陽」、「太衝」、「少衝」、「關衝」等。</p>
+        <p class="tr">《방언》에 "충은 동(動)이다"라 했다. '충'자로 이름 붙인 혈은 모두 '동맥 가운데'에 해당하니, 이른바 동수(動輸)로서 기충·충양·태충·소충·관충 등이 그것이다.</p>
+        <cite>황룡상 《중국침구학술사대강》 경락부 「충맥」 고증</cite>
+      </blockquote>
+      <blockquote>
+        <p class="han">凡穴名中冠以「氣」字或含有「衝」字者多爲脈動處…… 《明堂經》編者認爲體表脈之跳動乃因氣之鼓動或衝動所致。</p>
+        <p class="tr">혈명에 '기'자를 쓰거나 '충'자를 포함한 것은 대개 맥이 뛰는 곳이다. 《명당경》 편자는 체표 맥의 박동을 기의 고동·충동으로 보았다.</p>
+        <cite>황룡상 《중국침구학술사대강》 수혈부</cite>
+      </blockquote>
+      <div class="callout cool">
+        <strong>해석:</strong> '관충'이라는 이름은 <em>기(氣)가 통과하는 관문</em>이라는 후대의 사변적 해석 이전에,
+        <strong>체표에서 혈(血)의 움직임이 감지·확인되는 자리</strong>라는 관찰적 층위를 품고 있다.
+        점자출혈이 이 부위에서 유독 자연스럽게 발달한 이유는 신비한 기의 관문이어서가 아니라
+        <strong>애초에 혈맥 계열로 분류된 자리</strong>였기 때문이다.
+      </div>
+
+      <h3>1-3. 급성 인후통 처방의 실제 출전 — 혈방(穴方)이 아니라 낙자방(絡刺方)</h3>
+      <p><span class="tag src">코퍼스 근거</span> "관충 = 급성 인후통" 조합의 원문은 《明堂經》의 관충 주치가 아니라 《素問·繆刺論》의 낙맥 자법이다. 황룡상은 그 이식 경로를 명시한다.</p>
+      <blockquote>
+        <p class="han">邪客於手少陽之絡，令人喉痹舌卷，口乾心煩，臂外廉痛，手不及頭，刺手中指次指爪甲上，去端如韭葉各一痏，壯者立已。</p>
+        <p class="tr">사기가 수소양의 낙에 침범하면 후비(喉痹)와 설권, 구건·심번, 팔 바깥쪽 통증, 손을 머리까지 올리지 못함이 생긴다. 넷째손가락 조갑 위, 끝에서 부추잎 너비만큼 떨어진 곳을 각 1자(痏) 찌르면 건장한 사람은 즉시 낫는다.</p>
+        <cite>《素問·繆刺論》 — 황룡상 《중국침구학술사대강》 수혈부 인용</cite>
+      </blockquote>
+      <blockquote>
+        <p class="han">《明堂經》編者將《素問》原方主症歸於手少陽井穴「關衝」下。</p>
+        <p class="tr">《명당경》 편자가 《소문》 원방의 주된 증상을 수소양 정혈 '관충' 아래에 귀속시켰다.</p>
+        <cite>황룡상의 按語 — 주치 이식의 경로를 직접 지목</cite>
+      </blockquote>
+      <p>원문을 그대로 읽으면 대상은 <strong>"手中指次指爪甲上，去端如韭葉"</strong>이라는 <em>부위</em>이지 '관충혈'이라는 <em>점</em>이 아니다. 혈위 개념이 이 처방에 덧씌워진 것은 《명당경》 편집 단계, 즉 <strong>2차 층위</strong>다.</p>
+
+      <h3>1-4. 왜 하필 손끝인가 — 피부락(皮部絡) 학설의 운용 원리</h3>
+      <p><span class="tag src">코퍼스 근거</span> 황룡상은 《皮部論》을 이론편, 《繆刺論》을 운용편으로 규정하고, 사말(四末) 자락의 이론적 근거를 다음 원문에서 찾는다.</p>
+      <blockquote>
+        <p class="han">皮之部，輸於四末。</p>
+        <p class="tr">피부(락)의 부(部)는 사지 말단에 모인다.</p>
+        <cite>《靈樞》 백고(伯高)의 대답 — 황룡상: "《繆刺論》·《刺腰痛論》의 자락 규율과 완전히 부합한다"</cite>
+      </blockquote>
+      <blockquote>
+        <p class="han">凡刺之數，先視其經脈，切而從之，審其虛實而調之，不調者經刺之；有痛而經不病者繆刺之，因視其皮部有血絡者盡取之。</p>
+        <p class="tr">무릇 자법의 순서는, 먼저 그 경맥을 보고 눌러 따라가며 허실을 살펴 조절한다. 조절되지 않으면 경자(經刺)하고, 통증은 있으나 경이 병들지 않았으면 무자(繆刺)하되, <strong>그 피부에 혈락이 있는지 보아 남김없이 취한다.</strong></p>
+        <cite>《素問·皮部論》 — 황룡상: "피부락은 주로 무자법에 쓰인다"</cite>
+      </blockquote>
+      <div class="callout">
+        <strong>이 한 문장이 임상 프로토콜을 바꾼다.</strong> 고전의 지시는 "관충을 찌르라"가 아니라
+        <strong>"피부를 살펴 혈락이 보이면 그것을 전부 취하라(視其皮部有血絡者盡取之)"</strong>이다.
+        즉 <strong>시진(視診)으로 확인된 울혈된 소정맥</strong>이 표적이며, 혈위는 그 표적이 통계적으로 자주 나타나는 자리를 사후적으로 명명한 것에 가깝다.
+        황룡상은 또한 "낙맥 병의 무자법은 정혈을 찌르는 것 외에 상응하는 피부락도 취해야 한다"고 덧붙인다.
+      </div>
+
+      <h3>1-5. '응급 상황' 자법의 원형 — 시궐(尸厥) 처방</h3>
+      <p><span class="tag src">코퍼스 근거</span> 의식소실 응급에 손발톱 옆을 찌르는 관행 역시 《繆刺論》에 원형이 있다.</p>
+      <blockquote>
+        <p class="han">邪客於手足少陰太陰足陽明之絡，此五絡，皆會於耳中，上絡左角，五絡俱竭，令人身脈皆動，而形無知也，其狀若尸…… 刺其足大指內側爪甲上，去端如韭葉，後刺足心…… 立已。</p>
+        <p class="tr">사기가 다섯 낙에 침범하여 오락이 모두 고갈되면 온몸의 맥은 뛰는데 의식이 없어 주검과 같다. 엄지발가락 조갑 옆 부추잎 너비 자리를 찌르고, 이어 발바닥 중앙을 찌르면 즉시 낫는다.</p>
+        <cite>《素問·繆刺論》 시궐(尸厥) 처방 — 황룡상 인용</cite>
+      </blockquote>
+      <p>주목할 점은 이 처방의 진단 근거가 <strong>"身脈皆動而形無知(맥은 모두 뛰는데 의식이 없다)"</strong>라는 <em>순환-의식 해리 상태</em>라는 것이다. 응급 조갑각 자법의 고전적 적응증은 '고열' 일반이 아니라 <strong>의식 수준 저하를 동반한 순환 이상</strong>이었다.</p>
+
+      <h3>1-6. 출혈 자체의 고전적 원리 — 結絡·盛經의 해소</h3>
+      <blockquote>
+        <p class="han">索其結絡脈，刺出其血，以見通之。（王冰注：結，謂血結於絡中也，血去則經隧通矣）</p>
+        <p class="tr">맺힌 낙맥을 찾아 찔러 피를 내어 통하게 한다. (왕빙 주: '결'이란 피가 낙 가운데 맺힌 것이니, 피가 나가면 경수가 통한다)</p>
+        <cite>《素問·三部九候論》 및 왕빙 주 — 황룡상 인용</cite>
+      </blockquote>
+      <blockquote>
+        <p class="han">其結絡者，脈結血不和，決之乃行。</p>
+        <p class="tr">맺힌 낙이란 맥이 맺혀 피가 조화롭지 못한 것이니, 터뜨려야 비로소 흐른다.</p>
+        <cite>《靈樞·陰陽二十五人》 — 황룡상 인용</cite>
+      </blockquote>
+      <p>고전의 논리는 일관되게 <strong>국소적·기계적</strong>이다. "맺힌 곳을 터뜨려 흐르게 한다"는 것이지, 전신의 열을 혈액과 함께 배출한다는 체액병리적 설명이 원형은 아니다.</p>
+    </section>
+
+    <section>
+      <h2>2단계 · 평가 (Critical Historiographical Evaluation)</h2>
+
+      <h3>2-1. 통설의 층차 혼동 네 가지</h3>
+      <table>
+        <thead>
+          <tr><th style="width:22%">통설 명제</th><th style="width:39%">문헌 층차상의 실제</th><th>황룡상 관점의 비판</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="k">"삼초경의 시작점이므로 삼초의 열을 뺀다"</td>
+            <td>백서 단계에서는 '이맥(耳脈)'·'비소양맥'의 기점일 뿐 장부 배속이 없었다. 《靈樞·本輸》 "三焦者，上合手少陽，出於關衝"은 <strong>삼음삼양 명명 이후</strong>에 성립한 배속이다.</td>
+            <td>공리 ②에 따라 <strong>경맥 배속은 사후 체계화</strong>다. 배속을 전제로 주치를 연역하는 것은 인과의 역전이다. 황룡상은 십이경-육부 대응이 "하룻밤 사이에 완성된 지름길"이었다고 평한다.</td>
+          </tr>
+          <tr>
+            <td class="k">"급성 인후통의 요혈"</td>
+            <td>출전은 《繆刺論》 <strong>낙자방</strong>이며, 《明堂經》 편자가 관충 주치로 재배치했다(1-3 원문).</td>
+            <td>적응증 자체는 타당하나 <strong>시술의 성격이 오해</strong>되고 있다. 원형은 '혈위 자침'이 아니라 '낙맥 자출혈'이므로, 호침으로 관충을 찌르는 것이 오히려 원방에서 이탈한 변형이다.</td>
+          </tr>
+          <tr>
+            <td class="k">"고열에 쓴다"</td>
+            <td>《千金要方·孔穴主對法》은 "中衝、勞宮、大陵、間使、<strong>關衝</strong>、少衝、陽谿、天窗主熱病煩心……"처럼 여러 혈을 합편하는데, 황룡상에 따르면 이 주치는 <strong>첫 혈 '중충'의 것</strong>이고 나머지 혈은 그중 일부만 유사하다.</td>
+            <td>황룡상: "이 체례가 매우 특수하여 <strong>당 이후 이를 인용한 의가 중 알아본 이가 한 사람도 없었다</strong>." 관충의 '열병' 주치는 편집 체례 오독으로 증폭된 혐의가 짙다. <span class="tag warn">고열 단독 적응증의 독립 문헌 근거는 코퍼스 내 미확인</span></td>
+          </tr>
+          <tr>
+            <td class="k">"손끝 정혈이면 좌표대로 찌르면 된다"</td>
+            <td>《皮部論》의 지시는 "視其皮部有血絡者盡取之", 즉 <strong>보이는 혈락</strong>을 취하라는 것이다.</td>
+            <td>혈위 좌표를 기계적으로 계측해 찌르는 것은 공리 ③(동태적·해부학적 실증 정혈)에 위배된다. <strong>시진으로 울혈된 낙맥을 확인하는 절차</strong>가 원형에서는 필수였다.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><span class="tag src">코퍼스 근거</span> 부기: 황룡상의 역대 금기혈 정리표(表5-5)에서 《外臺秘要》가 추가로 든 목록에 <strong>관충이 포함</strong>된다. 후대 문헌에서 이 부위는 오히려 시술 제한이 논의되던 자리였다는 점도 층차로 기록해 둘 만하다.</p>
+
+      <h3>2-2. 현대 연구 설계에 대한 황룡상의 반성론 — 질문의 핵심에 직결</h3>
+      <p><span class="tag src">코퍼스 근거</span> "자율신경·말초혈류 측면에서 무엇이 다른가"라는 질문은, 황룡상이 현대 경락연구의 <strong>가장 큰 맹점</strong>으로 지목한 바로 그 지점이다.</p>
+      <blockquote>
+        <p class="han">經脈理論孕育於血脈而最後又回歸於血脈，從刺脈到調經，始終沒有離開血脈…… 古人刺脈時那樣小心翼翼操作，正是在於給血管壁以更多更準確地刺激。血管壁有什麼？至少交感神經是一個不可忽略的重要結構，扮演了連接神經-內分泌-免疫的一個重要角色。</p>
+        <p class="tr">경맥이론은 혈맥에서 배태되어 마침내 혈맥으로 돌아간다. 자맥(刺脈)에서 조경(調經)에 이르기까지 한 번도 혈맥을 떠난 적이 없다. 옛사람이 맥을 찌를 때 그토록 조심스럽게 조작한 것은 <strong>혈관벽에 더 많고 더 정확한 자극</strong>을 주기 위함이었다. 혈관벽에는 무엇이 있는가? 최소한 <strong>교감신경</strong>은 무시할 수 없는 중요 구조로, 신경-내분비-면역을 잇는 중요한 역할을 맡고 있다.</p>
+        <cite>황룡상 《경맥이론의 발견과 재해석》 — 경맥이론의 재구성 논의 (통합본 위치 839,811)</cite>
+      </blockquote>
+      <blockquote>
+        <p class="han">在過去的半個世紀……將兵力和希望都投向了軀體神經系統，而忽略了……自主神經。</p>
+        <p class="tr">지난 반세기 동안 (연구의) 병력과 희망을 모두 <strong>체성신경계</strong>에 투입하면서 <strong>자율신경</strong>을 소홀히 했다.</p>
+        <cite>황룡상 《경맥이론의 발견과 재해석》 — 경맥이론 실험연구 비판 (통합본 위치 840,012). 그는 "면역-혈관-신경 상호연계 네트워크(免疫-血管-神經交互聯繫網絡)" 가설을 진일보로 평가한다.</cite>
+      </blockquote>
+      <div class="callout">
+        <strong>따라서 황룡상 관점에서 이 질문은 '변형된 시술법의 부수효과'에 관한 물음이 아니다.</strong>
+        혈관벽과 그 주위 자율신경을 표적으로 삼는 점자출혈은, 그가 말한 <strong>경맥이론의 원형적 층위(刺脈)</strong>에 단순 자침보다 오히려 더 가깝다.
+        미침(微針)에 의한 조경(調經)은 그 원형에서 파생된 <strong>후대의 정교화</strong>에 해당한다.
+      </div>
+
+      <h3>2-3. 효과의 신경 의존성 — 황룡상이 제시한 '판결성 실험'의 논리</h3>
+      <blockquote>
+        <p class="han">阻斷神經之後，針刺對內臟的效應不再出現。</p>
+        <p class="tr">신경을 차단한 뒤에는 침자극의 내장에 대한 효과가 더 이상 나타나지 않는다.</p>
+        <cite>황룡상 《중국침구학술사대강》이 인용한 실험 결과 (통합본 위치 97,408) — '특수구조 가설' 대 '신경-체액 가설'의 판결성 실험(crucial experiment) 논의</cite>
+      </blockquote>
+      <blockquote>
+        <p class="han">並不是古人以爲的最簡單的直線聯繫，而是通過非常複雜的多級神經環路實現，整個過程中還伴隨有神經遞質、調質及其他活性物質。</p>
+        <p class="tr">(체표-내장 연계는) 옛사람이 생각한 가장 단순한 직선적 연결이 아니라 <strong>매우 복잡한 다단계 신경회로</strong>를 통해 실현되며, 전 과정에 신경전달물질·조절물질 및 기타 활성물질이 동반된다.</p>
+        <cite>황룡상 《중국침구학술사대강》 — 침자 진통 및 체표-내장 상관 연구 평가</cite>
+      </blockquote>
+      <p>이 두 인용은 아래 3-4에서 제안할 검증 설계의 직접적 근거가 된다. <strong>국소 신경차단 후에도 효과가 남는가</strong>를 묻는 것이 황룡상식 판결성 실험의 표준형이다.</p>
+    </section>
+
+    <section>
+      <h2>3단계 · 기술 (Definitive Description &amp; Modern Synthesis)</h2>
+
+      <h3>3-1. 표준 정위 및 시진 절차</h3>
+      <ul>
+        <li><strong>부위 기술(원문 기준)</strong> <span class="tag src">코퍼스 근거</span> — "手中指次指爪甲上，去端如韭葉": 넷째손가락 조갑 근위부, 끝에서 <em>부추잎 너비</em>만큼. 촌수 계측이 아니라 <strong>조갑각이라는 해부 랜드마크 + 미세 거리</strong>로 규정된 점에 주의(공리 ③에 부합).</li>
+        <li><strong>체위</strong> <span class="tag out">코퍼스 외</span> — 손을 가볍게 반쯤 쥐고 손등이 위로 오게 하며, 시술 전 손끝을 아래로 늘어뜨리거나 근위부를 가볍게 압박해 정맥 충혈을 유도한다. 이는 원문의 <em>"視其皮部有血絡者盡取之"</em>를 실제로 수행 가능하게 만드는 전제 조작이다.</li>
+        <li><strong>시진 우선</strong> <span class="tag src">코퍼스 근거</span> — 좌표를 먼저 찍지 말고, 조갑 주위·지절 배측에 <strong>확장·울혈된 소정맥(血絡)</strong>이 보이는지 먼저 살핀다. 보이면 그것이 표적이다.</li>
+      </ul>
+
+      <h3>3-2. 점자출혈 대 단순 자침 — 층위별 비교</h3>
+      <p><span class="tag out">코퍼스 외</span> 아래 표에서 생리학 항목은 현대 해부·생리학 일반 지식에 근거한 것으로 황룡상 저작의 서술이 아니다. 문헌 항목만 코퍼스 근거다.</p>
+      <table>
+        <thead>
+          <tr><th style="width:17%">층위</th><th style="width:42%">점자출혈 (三稜針·란셋)</th><th>단순 자침 (毫針 자입·득기 유지)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="k">문헌적 원형</td>
+            <td>《繆刺論》·《皮部論》 계열의 <strong>絡刺</strong>. 표적은 血絡, 판단 기준은 시진.</td>
+            <td>《靈樞》 계열의 <strong>調經</strong>. 표적은 경맥·수혈, 판단 기준은 기지(氣至).</td>
+          </tr>
+          <tr>
+            <td class="k">표적 조직</td>
+            <td>진피 유두층의 <strong>소정맥·모세혈관망과 혈관벽</strong>, 혈관주위 교감신경총</td>
+            <td>진피~피하 결합조직, 근막, 자유신경종말</td>
+          </tr>
+          <tr>
+            <td class="k">구심 섬유</td>
+            <td>단회 고강도 — Aδ(III군) 우세, 조직손상성 C(IV군) 동반</td>
+            <td>저강도 지속 — III/IV군의 <strong>지속적·반복적</strong> 발화</td>
+          </tr>
+          <tr>
+            <td class="k">국소 혈류</td>
+            <td>혈관 직접 손상 → <strong>축삭반사</strong>(CGRP·substance P) 매개 국소 혈관확장과 발적(flare). 손끝은 동정맥문합(AVA)·글로무스체 밀도가 최고여서 반응 진폭이 크다.</td>
+            <td>자침 부위 국소 미세순환 개선이 보고되나 진폭·즉시성은 상대적으로 작다.</td>
+          </tr>
+          <tr>
+            <td class="k">자율신경 반응</td>
+            <td><strong>이중성</strong>: 동측 국소는 축삭반사로 혈관확장, 동시에 통증성 체성-교감반사로 <strong>전신·대측 말초는 일시적 혈관수축</strong>과 심박·혈압 상승(각성 동반)이 일어날 수 있다.</td>
+            <td>지속 자극에서 미주신경 활성 증가·HRV 변화가 상대적으로 재현성 있게 보고된다.</td>
+          </tr>
+          <tr>
+            <td class="k">시간 프로파일</td>
+            <td>수 초의 자극 + 수십 분~수 시간의 국소 염증성 후속반응</td>
+            <td>유침 시간(통상 15~30분) 전체에 걸친 지속 입력</td>
+          </tr>
+          <tr>
+            <td class="k">출혈량의 기여</td>
+            <td><strong>실질적으로 없음</strong>. 수 방울(0.1~1 mL)은 순환혈액량·점도·체온에 유의한 영향을 주지 못한다. "열을 빼낸다"는 설명은 기전이 아니라 은유로 취급해야 한다.</td>
+            <td>해당 없음</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>결론적 정리:</strong> 두 술기의 차이는 <em>"피를 뺐는가"</em>가 아니라
+        <strong>① 자극 강도 프로파일(단회 고강도 vs 저강도 지속), ② 표적 조직(혈관벽 vs 결합조직·근막), ③ 축삭반사성 국소 반응의 개시 여부</strong>다.
+        황룡상의 표현을 빌리면 점자출혈은 <strong>"혈관벽에 더 많고 더 정확한 자극"</strong>을 주는 쪽에, 단순 자침은 <strong>"조경(調經)"</strong> 쪽에 속한다.
+      </div>
+
+      <h3>3-3. 임상 운용 제언</h3>
+      <ul>
+        <li><strong>적응 판단</strong> — 좌표보다 <strong>시진 소견(혈락의 가시적 울혈)</strong>을 우선한다. 소견이 없으면 원방의 조건이 충족되지 않은 것으로 본다.</li>
+        <li><strong>관충의 본치(本治) 재평가</strong> <span class="tag src">코퍼스 근거</span> — 문헌 층차상 가장 견고한 적응증은 <strong>이질(耳疾)·목외자·협통</strong> 계열이다. 인후통은 낙자방 경로로 정당화되고, 고열 단독은 근거가 가장 약하다.</li>
+        <li><strong>병용 원칙</strong> <span class="tag src">코퍼스 근거</span> — 황룡상이 인용한 원문대로, 낙병에는 정혈만이 아니라 <strong>해당 피부락 전체</strong>를 함께 취하는 것이 원형에 부합한다.</li>
+        <li><strong>안전</strong> <span class="tag out">코퍼스 외</span> — 일회용 란셋·무균 조작 원칙. 항응고제 복용, 응고장애, 말초순환장애(당뇨병성 등), 면역저하에서는 회피하거나 신중해야 하며, 과도한 압출은 조직손상만 키운다.</li>
+        <li><span class="tag warn">중요</span> 고열·의식저하·기도 위협을 동반하는 상황은 <strong>응급의료의 대상</strong>이며 이 술기가 그 대체물이 될 수 없다. 고전의 시궐 처방을 현대 응급 프로토콜의 근거로 확대 적용해서는 안 된다.</li>
+      </ul>
+
+      <h3>3-4. 검증 설계 제안 — 황룡상식 '판결성 실험'의 적용</h3>
+      <p>질문을 추측이 아니라 자료로 답하려면, 황룡상이 족삼리 논의에서 제시한 설계 논리를 그대로 옮기면 된다.</p>
+      <table>
+        <thead><tr><th style="width:20%">요소</th><th>설계</th></tr></thead>
+        <tbody>
+          <tr><td class="k">군 배정</td><td>A: 관충 점자출혈 / B: 관충 호침 자침(득기·유침 20분) / C: 비경혈 점자출혈(자극강도 대조) / D: sham(피부 압박만)</td></tr>
+          <tr><td class="k">판결 arm</td><td><strong>E: 수지신경 차단 후 동일한 관충 점자출혈.</strong> 여기서 효과가 소실되면 신경 매개, 잔존하면 국소 체액·혈관 기전의 독립적 기여가 입증된다 — 황룡상이 말한 판결성 실험의 형식 그대로다.</td></tr>
+          <tr><td class="k">말초혈류 지표</td><td>지첨 레이저도플러 관류(동측·대측 동시 측정), 적외선 체표온, 발적(flare) 면적, 모세혈관 재충혈 시간</td></tr>
+          <tr><td class="k">자율신경 지표</td><td>HRV(RMSSD·HF·LF/HF), 혈압·심박, 피부전도반응(SCR), 동공 반응</td></tr>
+          <tr><td class="k">임상 지표</td><td>인후통 VAS·연하통, 고막온/심부체온 곡선, 구제약 사용량</td></tr>
+          <tr><td class="k">핵심 가설</td><td>점자출혈은 <strong>동측 국소 혈관확장(축삭반사)</strong>과 <strong>전신의 일시적 교감 항진</strong>을 동시에 일으키고, 단순 자침은 후자가 약한 대신 지속적 부교감 이동이 우세할 것이다. <strong>양측 동시 측정</strong>이 이 두 성분을 분리하는 열쇠다.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3-5. 근거 수준에 대한 정직한 진술</h3>
+      <p><span class="tag warn">한계</span> 3-2의 생리 기전은 <strong>기전적 개연성</strong>이지 관충 점자출혈에 대해 직접 검증된 결과가 아니다. 정혈 자락에 관한 임상연구는 대부분 소표본·비맹검이며, 발열·인후통 영역에서 고품질 RCT는 부족하다. 황룡상 저작 코퍼스 내에는 <strong>관충 점자출혈의 자율신경 효과를 직접 다룬 서술이 없다</strong>(미확인). 이 보고서가 코퍼스에서 확립한 것은 <em>문헌 층차와 시술의 원형적 성격</em>이며, 생리 기전 부분은 검증 대상 가설로 제시한 것이다.</p>
+    </section>
+
+    <section>
+      <h2>참고 — 이 보고서의 근거 출처 (검증된 서지)</h2>
+      <h3>인용 원문이 실제로 나온 저작</h3>
+      <table>
+        <thead><tr><th style="width:34%">보고서 항목</th><th style="width:34%">실제 소속 저작</th><th>통합본 내 위치</th></tr></thead>
+        <tbody>
+          <tr><td class="k">《千金要方》 합편 체례 오독</td><td>《中国针灸学术史大纲》</td><td>24,989</td></tr>
+          <tr><td class="k">足三里 신경차단 판결성 실험</td><td>《中国针灸学术史大纲》</td><td>97,408</td></tr>
+          <tr><td class="k">尸厥 五絡俱竭 처방</td><td>《中国针灸学术史大纲》</td><td>105,781</td></tr>
+          <tr><td class="k">結絡·索其結絡脈 (왕빙 주)</td><td>《中国针灸学术史大纲》</td><td>187,363 / 187,389</td></tr>
+          <tr><td class="k">關衝 喉痹 繆刺方 및 《明堂經》 이식</td><td>《中国针灸学术史大纲》</td><td>238,933</td></tr>
+          <tr><td class="k">視其皮部有血絡者盡取之</td><td>《中国针灸学术史大纲》</td><td>239,407</td></tr>
+          <tr><td class="k">衝=動·動輸 고증</td><td>《中国针灸学术史大纲》</td><td>377,912</td></tr>
+          <tr><td class="k">皮之部，輸於四末</td><td>《中国针灸学术史大纲》</td><td>403,836</td></tr>
+          <tr><td class="k">《足臂十一脈》 비소양맥 기점</td><td>《中国针灸学术史大纲》</td><td>426,699</td></tr>
+          <tr><td class="k">《外臺秘要》 금기혈 목록</td><td>《中国针灸学术史大纲》</td><td>635,988</td></tr>
+          <tr><td class="k">혈맥 회귀론·자율신경 경시 비판·면역-혈관-신경 네트워크</td><td>《经脉理论的发现与再解释》(경맥이론의 발견과 재해석)</td><td>839,777~840,012</td></tr>
+        </tbody>
+      </table>
+      <p><span class="tag warn">중요</span> MCP 검색 도구는 모든 히트의 출처를 <code>4대명저_통합</code>으로 표시하지만, 통합본은 4권을 단순 연접한 파일이다. 위 표는 통합본 내 위치를 각 원서 구간(《中国针灸学术史大纲》 200~659,659 · 《경맥이론의 발견과 재해석》 659,659~1,015,937 · 《신고전 침구학대강》 1,015,937~1,270,789 · 《중국고전 침구학대강》 1,270,789~1,591,620)에 대조해 <strong>실제 원서를 역추적한 결과</strong>다. 이 보고서의 문헌 고증부는 사실상 《中国针灸学术史大纲》 한 권, 기전·반성론부는 《경맥이론의 발견과 재해석》 한 권에 근거한다.</p>
+
+      <h3>코퍼스 원본 구성</h3>
+      <ul>
+        <li><strong>저장소</strong>: <a href="https://github.com/jaehyokim-sketch/huanglongxiang-scholar">jaehyokim-sketch/huanglongxiang-scholar</a> (Public) / 로컬 사본 <code>D:/도서 번역/01_도서_번역_및_원전/황룡상/</code></li>
+        <li><strong>검색 대상 파일</strong> (<code>mcp_server/server.py</code> 기준): 황룡상_4대명저_통합_마스터(1,591,620자) · 中国针灸学术史大纲(659,403자) · 황룡상_교수_논문집_전체(403,400자) · 경맥이론의 발견과 재해석(356,222자) · 중국고전 침구학대강(321,031자) · 신고전 침구학대강(254,796자) + 논문_parsed 42편(401,028자)</li>
+        <li><strong>고유 텍스트량</strong>: 통합본은 4권의 연접본이고 논문_parsed 42편은 논문집 합본과 동일 내용이므로, 중복을 제거한 실제 고유 분량은 <strong>약 1,995,020자(≈199.5만 자)</strong>다. 스킬 문서의 "369만 자"는 중복 합산 수치다.</li>
+        <li><strong>원전 계보</strong>: 단행본 4종은 스캔 PDF(中国针灸学术史大纲 21.5MB / 경맥이론의 발견과 재해석 289MB / 신고전 침구학대강 165MB / 중국고전 침구학대강 202MB)를 텍스트 추출한 <code>*_parsed.md</code>이며, 페이지 마커(<code>&lt;!-- PAGE_START: n --&gt;</code>)가 보존되어 있다. 논문 42편은 <code>황룡상 교수 논문 모음/</code>의 개별 PDF에서 추출했다.</li>
+        <li><span class="tag warn">주의</span> parsed 텍스트는 OCR 산출물이라 오자·조판 붕괴가 섞여 있다. 본문의 한문 인용은 판독 가능한 구절만 골라 인용하되 표점은 정리했으며, 최종 인용 시에는 원서 해당 면을 대조할 것을 권한다.</li>
+        <li><span class="tag warn">미수록</span> 스킬 문서가 목록에 올린 《침구수혈통고》 전문(158.3만 자)과 361혈 마스터 CSV는 실제 저장소에 존재하지 않는다. 따라서 이 보고서는 《침구수혈통고》를 근거로 삼지 않았다.</li>
+      </ul>
+
+      <h3>호출한 MCP 도구</h3>
+      <ul>
+        <li><code>get_acupoint_source("关冲")</code> / <code>get_acupoint_source("足三里")</code></li>
+        <li><code>search_huanglongxiang_db("井穴")</code> / <code>("血络")</code> / <code>("缪刺")</code> / <code>("交感神经")</code> / <code>("手厥阴")</code></li>
+        <li><code>get_scholar_framework()</code> — 5대 공리 및 3단계 프로토콜</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p><strong>주의:</strong> 이 보고서는 문헌 고증·기전 분석을 위한 학술 자료이며 진단이나 치료 지시가 아닙니다. 사혈 및 침 시술은 면허를 갖춘 의료인이 무균 조건에서 시행해야 하며, 고열·의식저하·기도 증상은 응급의료의 대상입니다.</p>
+      <p>Generated from the Huanglongxiang Scholar MCP corpus · 황룡상 3단계 프로토콜 [분석 → 평가 → 기술]</p>
+    </footer>
+  </main>
+</body>
+</html>
