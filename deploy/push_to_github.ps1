@@ -1,4 +1,4 @@
-# deploy/push_to_github.ps1
+﻿# deploy/push_to_github.ps1
 # GitHub 원격 저장소 생성 및 푸시 도우미 스크립트
 
 param (

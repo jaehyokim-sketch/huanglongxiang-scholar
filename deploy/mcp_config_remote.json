@@ -5,7 +5,7 @@
       "args": [
         "<PATH_TO_REMOTE_SERVER_PY>/remote_server.py",
         "--repo",
-        "<GITHUB_USERNAME>/huanglongxiang-scholar",
+        "jaehyokim-sketch/huanglongxiang-scholar",
         "--branch",
         "main",
         "--token",
@@ -17,3 +17,4 @@
     }
   }
 }
+

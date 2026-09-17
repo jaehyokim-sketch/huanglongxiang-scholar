@@ -1,4 +1,4 @@
-# setup_skill.ps1
+﻿# setup_skill.ps1
 # 황룡상 스킬을 현재 PC의 Antigravity / Gemini 글로벌 스킬 디렉토리에 자동 복사합니다.
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
