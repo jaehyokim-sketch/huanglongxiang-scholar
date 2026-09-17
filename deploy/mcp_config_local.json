@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "huanglongxiang-scholar": {
+      "command": "python",
+      "args": [
+        "<PATH_TO_CLONED_REPO>/mcp_server/server.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "huanglongxiang-scholar-remote": {
+      "command": "python",
+      "args": [
+        "<PATH_TO_REMOTE_SERVER_PY>/remote_server.py",
+        "--repo",
+        "<GITHUB_USERNAME>/huanglongxiang-scholar",
+        "--branch",
+        "main",
+        "--token",
+        "<OPTIONAL_GITHUB_PAT_FOR_PRIVATE_REPO>"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

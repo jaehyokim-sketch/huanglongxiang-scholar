@@ -1,0 +1,34 @@
+# Ignore raw large PDF files (>100MB)
+*.pdf
+chunks/*.pdf
+황룡상 교수 논문 모음/
+raw_pdf/
+*.zip
+
+# Ignore Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*_implementation_plan*
+
+
+# Keep parsed markdown databases and chunk files
+!*.md
+!chunks_refined/*.md
+!논문_parsed/*.md
