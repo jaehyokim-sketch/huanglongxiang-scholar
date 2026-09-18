@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>황룡상 고증학술 관점 — 삼음교(SP6) 정위 및 침구임상지침</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1B365D;
+      --primary-light: #2B547E;
+      --secondary: #3182CE;
+      --accent: #D69E2E;
+      --danger: #E53E3E;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --radius: 12px;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Noto Sans KR', 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 48px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    
+    .badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #FFF;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    
+    .hanzi-title {
+      font-family: 'Noto Serif KR', serif;
+      color: var(--primary-light);
+    }
+    
+    .meta-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+    
+    h2 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin: 36px 0 18px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid var(--secondary);
+      padding-left: 12px;
+    }
+    
+    h3 {
+      font-size: 1.1rem;
+      color: var(--primary-light);
+      margin: 24px 0 12px 0;
+    }
+    
+    p { margin-bottom: 14px; }
+    
+    .timeline-card {
+      background: #F1F5F9;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 0.88rem;
+      overflow-x: auto;
+      border: 1px solid #CBD5E1;
+      line-height: 1.6;
+    }
+    
+    .quote-box {
+      background: #FEF3C7;
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 18px 0;
+      font-family: 'Noto Serif KR', serif;
+      color: #78350F;
+      font-size: 0.95rem;
+    }
+    
+    .critique-card {
+      background: #FFF5F5;
+      border: 1px solid #FED7D7;
+      border-left: 4px solid var(--danger);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+    }
+    
+    .critique-card h4 {
+      color: #C53030;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.92rem;
+    }
+    
+    th, td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    
+    th {
+      background: var(--primary);
+      color: #FFF;
+      font-weight: 600;
+    }
+    
+    tr:nth-child(even) { background: #F8FAFC; }
+    tr:hover { background: #EDF2F7; }
+    
+    .formula-list {
+      list-style: none;
+      margin: 16px 0;
+    }
+    
+    .formula-item {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      transition: transform 0.15s ease;
+    }
+    
+    .formula-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    
+    .formula-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    
+    .warning-box {
+      background: #FFF5F5;
+      border: 2px solid var(--danger);
+      color: #9B2C2C;
+      padding: 18px 24px;
+      border-radius: 8px;
+      margin: 28px 0;
+      font-weight: 500;
+    }
+    
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">황룡상 침구학술·문헌고증 마스터 리포트</div>
+    <h1>삼음교(<span class="hanzi-title">三陰交</span>, SP6) <br>표준 정위 및 침구임상지침</h1>
+    <div class="meta-subtitle">
+      전거: 《중국침구혈위통감》 · 《황제명당경》 · 《침구갑을경》 · 황룡상 교수 학술논문 DB
+    </div>
+
+    <!-- 1단계 -->
+    <h2>🏛️ [1단계: 분석] 기원 및 시대별 문헌 층차 고증</h2>
+    <p>
+      <strong>삼음교(SP6)</strong>는 족부의 세 음경인 <strong>족태음비경(脾), 족궐음간경(肝), 족소음신경(腎)</strong>이 내과 상방에서 교회(三陰之會)하는 특성을 지닌 요혈입니다.
+      최초 출전은 한대 《황제명당경(黃帝明堂經)》이며, 초기에는 부인과 전용혈이 아닌 <strong>내과 상방 경골 후연의 혈맥 맥기소발처(脈氣所發)</strong>로서 비위 소화기 및 하지 수습(水濕) 정체 반응점으로 출발했습니다.
+    </p>
+
+    <div class="timeline-card">
+[선진·한대 (원형)]             [위진·수당 (임상 확장)]          [송·금·원 (표준화)]           [명·청 (집대성 및 전사누적)]
+《황제명당경》/《침구갑을경》 ───➔ 《천금요방》·《외대비요》 ───➔ 《동인수혈도경》·《자생경》 ───➔ 《침구대성》
+· 하지 비통·수습·족열          · 부인과·비뇨생식 본격 확장      · 족삼음(비·간·신) 교회혈 확립  · 전사 착오(8촌 오기 등) 및 가탁
+    </div>
+
+    <div class="quote-box">
+      <strong>《황제명당경》 원문 고증:</strong><br>
+      “在內踝上三寸，骨下陷者中，足太陰、厥陰、少陰之會。刺入三分，留七呼，灸三壯。主足下熱，脛痛不能久立，濕痹不能行，飧泄，食不化，腹寒脹...”
+    </div>
+
+    <!-- 2단계 -->
+    <h2>⚖️ [2단계: 평가] 후대 문헌의 왜곡 및 전사 착오 비판</h2>
+    <div class="critique-card">
+      <h4>1. 위치 전사 오류 비판 (내과상 3촌 vs 8촌)</h4>
+      <p>《천금익방》 권28 등 일부 판본에서 <em>“在內踝上八寸”</em>으로 오기되어 혼선을 주었으나, 이는 <strong>‘三(3)’ 자가 ‘八(8)’ 자로 와전</strong>되었거나 상방 8촌의 누곡혈(SP7) 조문이 착간(錯簡)된 명백한 전사 착오임을 실증 입증함.</p>
+    </div>
+    <div class="critique-card">
+      <h4>2. 기계적 촌수(寸數) 계측의 맹점 비판</h4>
+      <p>손가락 4마디(一夫 = 3촌)를 기계적으로 대는 방식은 환자의 체형에 따른 오차가 큽니다. 반드시 <strong>경골 내측면 후연 뼈 밑(骨下陷者中)의 근막 간극과 신경·혈관 주행대</strong>를 촉진하여 정혈해야 합니다.</p>
+    </div>
+    <div class="critique-card">
+      <h4>3. 부인과 편향으로 인한 '비위 건운·수습 조절' 본치(本治) 간과 비판</h4>
+      <p>명청대 서적이 부인과 주치만 지나치게 부각하며 삼음교의 본래 효능인 <strong>비장 운화 및 체액 순환(利水化濕)</strong> 기능이 부차적으로 취급되는 임상적 편향을 지적함.</p>
+    </div>
+
+    <!-- 3단계 -->
+    <h2>📝 [3단계: 기술] 황룡상 표준 정위 및 임상지침</h2>
+    <h3>1. 표준 동태적 체위 및 취혈 랜드마크</h3>
+    <p>
+      <strong>체위:</strong> 정좌굴슬(正坐屈膝) 또는 앙와위에서 무릎을 가볍게 굽히고 대퇴를 외회전한 자세.<br>
+      <strong>정혈법:</strong> 족내과첨 직상방 3촌(내과첨~음릉천 13촌의 1/4 지점)에서 <strong>경골 내측연 후방의 쏙 들어가는 함요처(骨下陷中)</strong>를 촉진하여, 압박 시 뻐근한 산창감이 발바닥(용천 부위)으로 방산되는 자리를 취혈.
+    </p>
+
+    <h3>2. 핵심 임상 적응증 매트릭스</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>분류</th>
+          <th>주요 적응증</th>
+          <th>기제 및 임상 적용 지침</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>비위·수습 조절</strong></td>
+          <td>복창(腹脹), 설사(泄瀉), 수종(水腫), 소변불리, 각기</td>
+          <td>비장 운화 촉진 및 하초 수액대사 원활화</td>
+        </tr>
+        <tr>
+          <td><strong>부인과·산과</strong></td>
+          <td>월경부조, 통경(痛經), 붕루, 대하, 난산, 태의불하</td>
+          <td>족삼음(비·간·신) 동시 조절을 통한 통경활혈 및 지혈</td>
+        </tr>
+        <tr>
+          <td><strong>남성 비뇨생식</strong></td>
+          <td>유정(遺精), 양위(陽痿), 음경통, 산기(疝氣), 배뇨장애</td>
+          <td>간신(肝腎) 기혈 자양 및 하초 습열 청리</td>
+        </tr>
+        <tr>
+          <td><strong>하지 신경·혈관</strong></td>
+          <td>경골 냉통(脛痛), 족하열, 하지마비, 족저 신경통</td>
+          <td>후경골신경 및 혈관망 자극을 통한 국소 기혈 소통</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>3. 황룡상 고증 최적 배오(配伍) 처방</h3>
+    <ul class="formula-list">
+      <li class="formula-item">
+        <div class="formula-title">1. 기혈 조화 및 발한(發汗) 진통: 합곡(LI4) + 삼음교(SP6)</div>
+        <p>《침구임상변증론치》 196례 중 최다 빈도 조합. 기분(합곡)과 혈분(삼음교)을 동시 조율하여 전신 진통 및 경락 소통 극대화.</p>
+      </li>
+      <li class="formula-item">
+        <div class="formula-title">2. 하초 수습(水濕) 및 비뇨기 수종: 음릉천(SP9) + 삼음교(SP6) + 중극(CV3)</div>
+        <p>비장 수습을 하강시키고 방광 기화를 도와 소변불리와 부종 치료.</p>
+      </li>
+      <li class="formula-item">
+        <div class="formula-title">3. 부인과 혈열(血熱) 붕루: 은백(SP1, 뜸) + 삼음교(SP6, 침) + 혈해(SP10)</div>
+        <p>비통혈(脾統血) 기능을 회복시켜 지혈 및 조경.</p>
+      </li>
+      <li class="formula-item">
+        <div class="formula-title">4. 기혈 쌍보 및 비위 허약: 족삼리(ST36) + 삼음교(SP6)</div>
+        <p>선천(신)과 후천(비위)을 동시 보익하여 하지 무력 및 만성 허약증 치료.</p>
+      </li>
+    </ul>
+
+    <h3>4. 자침 심도 및 안전 시술 지침</h3>
+    <p>
+      · <strong>직자(直刺):</strong> 1.0 ~ 1.5촌 자입하여 심부 후경골근막 도달.<br>
+      · <strong>투자(透刺):</strong> 외과 절골(현종, GB39) 방향으로 1.5 ~ 2.0촌 사자하여 족삼음·족삼양 동시 소통.
+    </p>
+
+    <div class="warning-box">
+      ⚠️ <strong>임상 절대 금기 (Absolute Contraindication): 임신부 금침(孕婦禁針)</strong><br>
+      자궁 평활근 수축을 유발하므로 임신 중인 여성에게는 강자극 및 합곡과의 배합 자침을 엄격히 금함 (낙태 유발 위험, 난산 시 최산 목적으로만 제한적 사용).
+    </div>
+
+    <div class="footer">
+      Generated by Antigravity IDE · Huang Longxiang Scholarly Framework Database
+    </div>
+  </div>
+</body>
+</html>

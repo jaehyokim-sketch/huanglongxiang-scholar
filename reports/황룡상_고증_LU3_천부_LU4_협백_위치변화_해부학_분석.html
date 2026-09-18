@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>황룡상 고증학술 관점 — LU3 천부 & LU4 협백 위치변화 및 해부학적 특징</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1B365D;
+      --primary-light: #2B547E;
+      --secondary: #3182CE;
+      --accent: #D69E2E;
+      --teal: #0D9488;
+      --danger: #E53E3E;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --radius: 12px;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Noto Sans KR', 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 50px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    
+    .badge {
+      display: inline-block;
+      background: var(--teal);
+      color: #FFF;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    h1 {
+      font-size: 2.1rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    
+    .hanzi-title {
+      font-family: 'Noto Serif KR', serif;
+      color: var(--primary-light);
+    }
+    
+    .meta-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+    
+    h2 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin: 40px 0 18px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid var(--secondary);
+      padding-left: 12px;
+    }
+    
+    h3 {
+      font-size: 1.15rem;
+      color: var(--primary-light);
+      margin: 28px 0 14px 0;
+    }
+    
+    p { margin-bottom: 14px; }
+    
+    .timeline-card {
+      background: #F1F5F9;
+      padding: 22px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 0.88rem;
+      overflow-x: auto;
+      border: 1px solid #CBD5E1;
+      line-height: 1.6;
+    }
+    
+    .quote-box {
+      background: #FEF3C7;
+      border-left: 4px solid var(--accent);
+      padding: 16px 22px;
+      border-radius: 0 8px 8px 0;
+      margin: 18px 0;
+      font-family: 'Noto Serif KR', serif;
+      color: #78350F;
+      font-size: 0.95rem;
+    }
+    
+    .diagram-card {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    
+    .critique-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    @media (max-width: 768px) {
+      .critique-grid { grid-template-columns: 1fr; }
+    }
+    
+    .critique-card {
+      background: #FFF5F5;
+      border: 1px solid #FED7D7;
+      border-left: 4px solid var(--danger);
+      padding: 18px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .critique-card h4 {
+      color: #C53030;
+      margin-bottom: 8px;
+      font-size: 0.98rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.92rem;
+    }
+    
+    th, td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    
+    th {
+      background: var(--primary);
+      color: #FFF;
+      font-weight: 600;
+    }
+    
+    tr:nth-child(even) { background: #F8FAFC; }
+    tr:hover { background: #EDF2F7; }
+    
+    .point-card {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    
+    .point-header {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 8px;
+    }
+    
+    .warning-box {
+      background: #FFFBEB;
+      border: 2px solid var(--accent);
+      color: #92400E;
+      padding: 18px 24px;
+      border-radius: 8px;
+      margin: 28px 0;
+      font-weight: 500;
+    }
+    
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">수태음폐경 고증학술 리포트</div>
+    <h1>천부(<span class="hanzi-title">天府</span>, LU3) & 협백(<span class="hanzi-title">俠白</span>, LU4)<br>위치 변화 및 해부학적 특징 심층 분석</h1>
+    <div class="meta-subtitle">
+      전거: 황룡상 교수 저작 《중국침구학술사대강》 · 《중국침구혈위통감》 · 《경맥병후고원》 · 《황제명당경》
+    </div>
+
+    <!-- 1단계 -->
+    <h2>🏛️ [1단계: 분석] 기원 및 시대별 문헌 층차 고증</h2>
+    <p>
+      수태음폐경의 상완부 2혈인 <strong>천부(LU3)</strong>와 <strong>협백(LU4)</strong>은 고대 경맥학 형성기(선진~한대)에 
+      상완 전외측의 굵은 혈관 박동점인 <strong>수태음 표맥(標脈, 腋下/腋內動脈)</strong>에서 기원한 유서 깊은 요혈입니다.
+    </p>
+
+    <div class="timeline-card">
+[원시 층차: 《영추》·《명당경》]        [수당 층차: 《갑을경》·《천금방》]       [송원 층차: 《동인도경》·《발휘》]       [명청 층차: 《침구대성》·현대]
+· 천부: 腋下/腋内动脉 (동맥 박동)   · 비첨점묵법(鼻尖点墨) 체위 정형화  · 상완 골도(9촌) 체계화         · 기계적 촌수 도식화 (천부하 1촌)
+· 협백: 去肘五寸 动脉中 (주상 5촌)   · 심통·비내렴통 방산통 기록         · 천부: 주상 6촌 / 협백: 주상 5촌 · 동맥 박동 및 체위 지표 상실
+    </div>
+
+    <div class="quote-box">
+      <strong>《영추》 및 《황제명당경》 원문 고증:</strong><br>
+      · 《영추·본수》: “腋內動脈，手太陰也，名曰天府.”<br>
+      · 《황제명당경》: “天府，在腋下三寸，臂臑內廉動脈，手太陰脈氣所發。”<br>
+      · 《황제명당경》: “俠白，在天府下，去肘五寸動脈中，手太陰之別。”
+    </div>
+
+    <!-- 2단계 -->
+    <h2>⚖️ [2단계: 평가] 위치 변화와 후대 왜곡 비판</h2>
+    <div class="critique-grid">
+      <div class="critique-card">
+        <h4>1. 천부혈 '비첨점묵법(鼻尖點墨法)'의 실증적 복원</h4>
+        <p>코끝에 먹물을 묻혀 팔에 닿는 곳을 취혈하는 고대 취혈법은 허황된 방식이 아니라, <strong>팔을 전방 굴곡·내전(Adduction)시킬 때 상완이두근 외측연과 혈관 박동처가 일치하는 정밀한 동태적 체위 랜드마크</strong>임을 황룡상 교수가 실증함.</p>
+      </div>
+      <div class="critique-card">
+        <h4>2. 협백혈 '거주 5촌' vs '천부 하 1촌' 도식화 오류</h4>
+        <p>상완 골도 9촌 체계에서 천부(액하 3촌=주상 6촌)와 협백(주상 5촌)은 1촌 차이지만, 후대 서적이 <strong>“천부 하 1촌”으로만 기계적으로 도식화하면서 주횡문 기준 5촌과 동맥 박동 지표를 유실</strong>함.</p>
+      </div>
+    </div>
+
+    <div class="critique-card" style="margin-top: 0;">
+      <h4>3. 심장 연관통(Referred Pain)과 수태음 표맥의 연계성 축소 비판</h4>
+      <p>《족비십일맥구경》 및 《영추》에서 천부와 협백은 폐 질환뿐만 아니라 <strong>심통(心痛), 심번(心煩), 비내렴통(臂內廉痛)</strong> 등 협심증 시 상완 내측으로 방산되는 연관통을 치료하는 요혈이었으나, 후대에 단순 폐경 국소혈로 축소된 점을 비판함.</p>
+    </div>
+
+    <!-- 3단계 -->
+    <h2>📝 [3단계: 기술] 해부학적 특징 및 표준 정위</h2>
+    
+    <div class="diagram-card">
+[상완 전외측 종단면 골도 구조]
+액와 전횡문단 (0촌)
+   │
+   │ (3촌) ──➔ [천부 LU3]: 상완이두근 외측연 함요처, 상완동맥 외측지 박동처 (주횡문 상 6촌)
+   │ (1촌)
+   │ (4촌) ──➔ [협백 LU4]: 상완이두근 외측연 함요처, 거주 5촌 (주횡문 상 5촌 동맥처)
+   │
+   │ (5촌)
+   ▼
+주횡문 (척택 LU5 레벨, 9촌)
+    </div>
+
+    <h3>1. 천부(LU3)와 협백(LU4) 정혈 상세</h3>
+    <div class="point-card">
+      <div class="point-header">
+        <span>천부(天府, Tianfu) — LU3</span>
+        <span>액하 3촌 / 주횡문 상 6촌</span>
+      </div>
+      <p><strong>정위:</strong> 상완 전외측면, 상완이두근 외측연, 액와 전횡문두 하방 3촌.<br>
+      <strong>취혈법:</strong> 팔을 앞으로 들어 코끝을 향해 가볍게 굴곡·내전시키고, 상완이두근 외측 고랑(bicipital groove)을 따라 맥박이 촉지되는 함요처를 취혈.</p>
+    </div>
+
+    <div class="point-card">
+      <div class="point-header">
+        <span>협백(俠白, Xiabai) — LU4</span>
+        <span>주횡문 상 5촌 / 천부 직하 1촌</span>
+      </div>
+      <p><strong>정위:</strong> 상완 전외측면, 상완이두근 외측연, 주횡문(척택혈) 상방 5촌.<br>
+      <strong>취혈법:</strong> 팔꿈치를 자연스럽게 굽히고, 주횡문 위 5촌 지점에서 상완이두근 외측연의 근막 간극과 박동처를 촉진하여 취혈.</p>
+    </div>
+
+    <h3>2. 해부학적 심층 구조 및 신경·혈관망</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>해부 층차</th>
+          <th>천부 (LU3) 구조물</th>
+          <th>협백 (LU4) 구조물</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>근육계</strong></td>
+          <td>상완이두근(Biceps brachii) 외측연, 상완근(Brachialis)</td>
+          <td>상완이두근 외측연 근복(筋腹) 함요처, 상완근</td>
+        </tr>
+        <tr>
+          <td><strong>신경계</strong></td>
+          <td>외측전완피신경(Lateral antebrachial cut. n., C5-C6), 심층 근피신경</td>
+          <td>외측전완피신경, 근피신경(Musculocutaneous n.) 지배 분지</td>
+        </tr>
+        <tr>
+          <td><strong>혈관계</strong></td>
+          <td>두부정맥(Cephalic v.), 상완동맥(Brachial a.) 전외측 분지</td>
+          <td>두부정맥, 요골측부동맥(Radial collateral a.) 분지</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>3. 임상 주치 효능 및 최적 배오</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>경혈</th>
+          <th>핵심 주치증 (본치)</th>
+          <th>황룡상 추천 최적 배오</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>천부 (LU3)</strong></td>
+          <td>· 폐열 기천, 해수<br>· <strong>비뉵(鼻衄, 코피의 지혈 특효혈)</strong><br>· 상완 전외측 비통</td>
+          <td>· <strong>천부(LU3) + 합곡(LI4)</strong>: 폐열로 인한 코피 및 인후통 지혈·해표<br>· <strong>천부(LU3) + 경거(LU8)</strong>: 흉배급통 및 폭담내역 치료</td>
+        </tr>
+        <tr>
+          <td><strong>협백 (LU4)</strong></td>
+          <td>· 해수, 기천, 흉만(胸滿)<br>· <strong>심통(心痛), 단기(短氣), 심번</strong><br>· 상완 내측 방산통</td>
+          <td>· <strong>협백(LU4) + 내관(PC6) + 심유(BL15)</strong>: 심흉통 및 협심증 방산통 완화<br>· <strong>협백(LU4) + 척택(LU5)</strong>: 상완이두근건염 및 팔꿈치 굴곡 장애</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warning-box">
+      ⚠️ <strong>자침 심도 및 안전 시술 지침</strong><br>
+      · 직자(直刺) 0.5 ~ 1.0촌 자입. 상완골 방향으로 수직 자입.<br>
+      · 상완 내측 심부로 너무 깊게 찌를 경우 상완동맥 본간 및 정중신경 손상 위험이 있으므로, 반드시 <strong>상완이두근 외측연의 안전한 근간 구(溝)</strong>를 지켜 취혈해야 합니다.
+    </div>
+
+    <div class="footer">
+      Generated by Antigravity IDE · Huang Longxiang Scholarly Framework Database
+    </div>
+  </div>
+</body>
+</html>

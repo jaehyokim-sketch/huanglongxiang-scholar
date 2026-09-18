@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>황룡상 고증학술 관점 — ST36 족삼리(足三里) 해부학적 특징 심층 분석</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1B365D;
+      --primary-light: #2B547E;
+      --secondary: #3182CE;
+      --accent: #D69E2E;
+      --teal: #0D9488;
+      --danger: #E53E3E;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --radius: 12px;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Noto Sans KR', 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.8;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 50px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    
+    .badge {
+      display: inline-block;
+      background: var(--teal);
+      color: #FFF;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    
+    .hanzi-title {
+      font-family: 'Noto Serif KR', serif;
+      color: var(--primary-light);
+    }
+    
+    .meta-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+    
+    h2 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin: 40px 0 18px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid var(--secondary);
+      padding-left: 12px;
+    }
+    
+    h3 {
+      font-size: 1.15rem;
+      color: var(--primary-light);
+      margin: 28px 0 14px 0;
+    }
+    
+    p { margin-bottom: 14px; }
+    
+    .timeline-card {
+      background: #F1F5F9;
+      padding: 22px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 0.88rem;
+      overflow-x: auto;
+      border: 1px solid #CBD5E1;
+      line-height: 1.6;
+    }
+    
+    .quote-box {
+      background: #FEF3C7;
+      border-left: 4px solid var(--accent);
+      padding: 16px 22px;
+      border-radius: 0 8px 8px 0;
+      margin: 18px 0;
+      font-family: 'Noto Serif KR', serif;
+      color: #78350F;
+      font-size: 0.95rem;
+    }
+    
+    .diagram-card {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    
+    .critique-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    @media (max-width: 768px) {
+      .critique-grid { grid-template-columns: 1fr; }
+    }
+    
+    .critique-card {
+      background: #FFF5F5;
+      border: 1px solid #FED7D7;
+      border-left: 4px solid var(--danger);
+      padding: 18px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .critique-card h4 {
+      color: #C53030;
+      margin-bottom: 8px;
+      font-size: 0.98rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.92rem;
+    }
+    
+    th, td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    
+    th {
+      background: var(--primary);
+      color: #FFF;
+      font-weight: 600;
+    }
+    
+    tr:nth-child(even) { background: #F8FAFC; }
+    tr:hover { background: #EDF2F7; }
+    
+    .point-card {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    
+    .point-header {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 8px;
+    }
+    
+    .highlight-box {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-left: 4px solid #16A34A;
+      padding: 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+    }
+    
+    .highlight-box h4 {
+      color: #15803D;
+      margin-bottom: 6px;
+    }
+    
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">족양명위경 고증학술 리포트</div>
+    <h1>족삼리(<span class="hanzi-title">足三里</span>, ST36)<br>해부학적 특징 및 실증 정혈 심층 분석</h1>
+    <div class="meta-subtitle">
+      전거: 황룡상 교수 저작 《중국침구학술사대강》 · 《신고전침구학대강》 · 《침구수혈통고》 · 《영추·본수》
+    </div>
+
+    <!-- 1단계 -->
+    <h2>🏛️ [1단계: 분석] 기원 및 명칭의 고고학적 고증</h2>
+    <p>
+      족삼리(ST36)는 고대 침구학 형성기부터 위(胃)의 육부하합혈(六腑下合穴)이자 사총혈(四總穴)의 으뜸으로 자리매김한 혈위로, 
+      원시 문헌에서는 <strong>하릉삼리(下陵三里)</strong>라는 형태학적 명칭으로 출현합니다.
+    </p>
+
+    <div class="timeline-card">
+[원시 층차: 《영추·본수》]              [위진·수당: 《명당경》·《천금방》]         [송원·명청: 《동인경》·《사총혈가》]
+· 下陵三里: 膝下三寸 骨外三里        · 胻骨外廉 兩筋間 (전경골근 근간)     · 肚腹三里留 (복부 질환 전신 총혈)
+· 胃之下輸: 육부하합혈 (합혈)        · 만병 구급·강장 뜸치료 정형화         · 기계적 독비하 3촌 계측 도식화
+    </div>
+
+    <div class="quote-box">
+      <strong>《영추》 및 《황제명당경》 원문 고증:</strong><br>
+      · 《영추·본수》: “胃出於厲兌……入於下陵，下陵者，膝下三寸，骨外三里也，為合。”<br>
+      · 《황제명당경》: “足三里，在膝下三寸，胻骨外廉兩筋間，足陽明脈之所入也，為合。”
+    </div>
+
+    <p>
+      <strong>하릉(下陵)과 삼리(三里)의 어원:</strong> 고대인은 융기된 무릎 관절을 언덕 <strong>'능(陵)'</strong>으로 보았으며, 
+      무릎 내측을 '음릉천(陰陵泉)', 외측을 '양릉천(陽陵泉)', 무릎 아래 평탄한 경골 외측부를 <strong>'하릉(下陵)'</strong>이라 칭했습니다. 
+      또한 《영추》에서 '리(里)'는 거리 단위 '촌(寸)'과 동일하게 사용되어, <em>“무릎 언덕 아래 3촌의 뼈 바깥 함요처”</em>라는 형태적 랜드마크가 혈명이 되었습니다.
+    </p>
+
+    <!-- 2단계 -->
+    <h2>⚖️ [2단계: 평가] 기계적 계측 비판과 해부학적 실증</h2>
+    <div class="critique-grid">
+      <div class="critique-card">
+        <h4>1. "독비(犢鼻) 하 3촌"의 기계적 계측 비판</h4>
+        <p>후대 서적처럼 단순히 손가락 3촌을 재는 기계적 계측을 배격하고, <strong>무릎을 90도로 굽혔을 때 경골조면(脛骨粗隆) 외하방 1횡지, 전경골근(Tibialis anterior) 근복(筋腹)의 가장 솟아오른 외측 고랑(兩筋間) 함요부</strong>를 촉진해야 함을 실증함.</p>
+      </div>
+      <div class="critique-card">
+        <h4>2. 혈관주위 교감신경망과 자율신경 조절 실증</h4>
+        <p>족삼리의 위장관 운동 항진 효과는 단순 체성신경이 아니라, <strong>전경골동맥 주위를 둘러싼 교감신경망(Perivascular sympathetic plexus)과 심비골신경의 복합 반사</strong>임을 규명. 혈관망 박리 시 효과가 소실됨을 밝혀 고대인의 '맥기(脈氣)' 개념을 현대적으로 증명함.</p>
+      </div>
+    </div>
+
+    <!-- 3단계 -->
+    <h2>📝 [3단계: 기술] 해부학적 특징 및 표준 정위</h2>
+    
+    <div class="diagram-card">
+[하지 전외측 종단면 골도 및 신경·혈관 구조]
+슬개골 하연 (독비 ST35)
+   │
+   │ (3촌)
+   ├─── [경골조면(Tibial Tuberosity)] ── (외측 1횡지) ──➔ [족삼리 ST36] (전경골근 근간)
+   │                                                         │ (전경골동맥 & 심비골신경)
+   │ (3촌)
+   └───➔ [상거허 ST37]: 전경골근 외측연, 대장 하합혈 (독비 하 6촌)
+   │
+   │ (3촌)
+   └───➔ [하거허 ST39]: 전경골근 외측연, 소장 하합혈 (독비 하 9촌)
+    </div>
+
+    <h3>1. 황룡상 표준 정위 가이드</h3>
+    <div class="point-card">
+      <div class="point-header">
+        <span>족삼리(足三里, Zusanli) — ST36</span>
+        <span>독비 하 3촌 / 경골조면 외측 1횡지</span>
+      </div>
+      <p><strong>표준 정위:</strong> 종아리 앞외측면, 경골외측과와 경골조면 사이의 외하방 1횡지(경골 능선 외측 1촌), 전경골근(Tibialis anterior) 부위.<br>
+      <strong>동태적 취혈법:</strong> <strong>정좌굴슬(正坐屈膝, 무릎 90도 굴곡)</strong> 자세에서 경골조면을 짚고, 외측으로 1횡지 이동하여 전경골근과 장지신근 사이의 근간구(兩筋間)에서 뻐근한 압통점을 취혈.</p>
+    </div>
+
+    <h3>2. 단면 해부학적 층차 (Anatomical Strata)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>해부 층차</th>
+          <th>구조물 명칭</th>
+          <th>임상적 의의</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>① 표층 (Superficial)</strong></td>
+          <td>피부, 피하조직, 하퇴근막(Crural fascia), 외측비복피신경</td>
+          <td>자침 시 1차적 침감(따끔함) 및 피하 감각 수용기 활성화</td>
+        </tr>
+        <tr>
+          <td><strong>② 근육층 (Muscle)</strong></td>
+          <td>전경골근(Tibialis anterior m.) 근복, 장지신근 근간</td>
+          <td>묵직하고 뻐근한 산창감(Acid-distension) 형성층</td>
+        </tr>
+        <tr>
+          <td><strong>③ 신경·혈관층 (Neurovascular)</strong></td>
+          <td>전경골동·정맥(Ant. tibial a./v.), 심비골신경(Deep fibular n.)</td>
+          <td><strong>위장관 연동운동 조절의 핵심 자율신경 반사층</strong></td>
+        </tr>
+        <tr>
+          <td><strong>④ 심층 (Deep base)</strong></td>
+          <td>골간막(Interosseous membrane) 및 경골 외측면</td>
+          <td>직자 시 최대 심도 한계선 (저항감 형성)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      <h4>🎯 자침 심도 및 득기(得氣) 신경 감응 경로</h4>
+      <p>
+        · <strong>직자(直刺) 1.0 ~ 2.0촌(25~50mm)</strong>: 전경골근을 수직 관통하여 신경·혈관 다발 간극까지 자입.<br>
+        · <strong>득기 감응</strong>: 뻐근한 산창감과 함께 <strong>심비골신경 주행로를 따라 발목 앞(해계) 및 제2·3 발가락(여태 방면) 끝으로 찌릿한 전기 감응이 방산</strong>될 때 최대 치료 반응 도출.
+      </p>
+    </div>
+
+    <h3>3. 핵심 임상 주치 효능 매트릭스</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>임상 계통</th>
+          <th>핵심 주치증 (본치)</th>
+          <th>생리학적 조절 기제</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>비위 소화기</strong></td>
+          <td>위통, 구토, 복창, 설사, 변비, 소화불량</td>
+          <td>혈관주위 교감신경 및 미주신경 반사를 통한 위장관 운동/분비 양방향 정상화</td>
+        </tr>
+        <tr>
+          <td><strong>전신 기혈 강장</strong></td>
+          <td>만성 피로, 허약 체질, 빈혈, 면역 저하</td>
+          <td>체성-내장 반사를 통한 전신 대사율 및 면역 인자 증진</td>
+        </tr>
+        <tr>
+          <td><strong>하지 신경근육계</strong></td>
+          <td>하지마비, 전경골근 위축, 족하수(Foot drop)</td>
+          <td>심비골신경 자극을 통한 족배굴(Dorsiflexion) 운동 기능 재활</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      Generated by Antigravity IDE · Huang Longxiang Scholarly Framework Master Database
+    </div>
+  </div>
+</body>
+</html>

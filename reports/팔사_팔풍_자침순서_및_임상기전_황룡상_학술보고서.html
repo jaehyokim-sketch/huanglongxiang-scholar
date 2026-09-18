@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팔사(八邪)·팔풍(八風)의 자침 순서와 임상 치료 기전에 관한 황룡상 학술 고증 보고서</title>
+  <!-- Google Fonts & CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'neutral',
+      themeVariables: {
+        fontFamily: 'Noto Sans KR',
+        primaryColor: '#e0f2fe',
+        edgeColor: '#0284c7',
+        lineColor: '#0284c7'
+      }
+    });
+  </script>
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-alt: #f1f5f9;
+      --border-color: #e2e8f0;
+      --border-focus: #3b82f6;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent-amber: #d97706;
+      --accent-emerald: #059669;
+      --accent-rose: #e11d48;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-main: #090d16;
+        --bg-card: #111827;
+        --bg-card-alt: #1f2937;
+        --border-color: #374151;
+        --border-focus: #60a5fa;
+        --text-main: #f3f4f6;
+        --text-muted: #cbd5e1;
+        --text-light: #9ca3af;
+        --primary: #38bdf8;
+        --primary-dark: #0284c7;
+        --primary-light: #082f49;
+        --accent-amber: #f59e0b;
+        --accent-emerald: #10b981;
+        --accent-rose: #f43f5e;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 2rem 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Header Section */
+    .header {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(99, 102, 241, 0.05));
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), #6366f1);
+    }
+
+    .badge-wrap {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-primary {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .badge-amber {
+      background: rgba(217, 119, 6, 0.15);
+      color: var(--accent-amber);
+    }
+
+    .badge-emerald {
+      background: rgba(5, 150, 105, 0.15);
+      color: var(--accent-emerald);
+    }
+
+    h1 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    .meta-info {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.75rem;
+    }
+
+    /* Executive Callout */
+    .callout-hero {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-left: 5px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .callout-hero h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .callout-hero p {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    /* Sections */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .step-tag {
+      background: var(--primary);
+      color: white;
+      font-size: 0.85rem;
+      font-family: 'Noto Sans KR', sans-serif;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* Mermaid Box */
+    .mermaid-box {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Comparison Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .compare-card {
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .compare-card.myth {
+      background: rgba(225, 29, 72, 0.05);
+      border-color: rgba(225, 29, 72, 0.2);
+    }
+
+    .compare-card.myth h3 {
+      color: var(--accent-rose);
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .compare-card.fact {
+      background: rgba(5, 150, 105, 0.05);
+      border-color: rgba(5, 150, 105, 0.2);
+    }
+
+    .compare-card.fact h3 {
+      color: var(--accent-emerald);
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Table Styling */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--bg-card-alt);
+      color: var(--text-main);
+      padding: 0.85rem 1rem;
+      font-weight: 600;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-muted);
+    }
+
+    tr:hover td {
+      background: rgba(2, 132, 199, 0.03);
+    }
+
+    /* Quote Box */
+    blockquote {
+      background: var(--bg-card-alt);
+      border-left: 4px solid var(--accent-amber);
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--text-main);
+    }
+
+    /* Principle Cards */
+    .principle-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .principle-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-card-alt);
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .principle-num {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      min-width: 2rem;
+    }
+
+    .principle-content h4 {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .principle-content p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-light);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Print Optimization */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+        padding: 0 !important;
+      }
+      .header, .section-card, .callout-hero {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <header class="header">
+      <div class="badge-wrap">
+        <span class="badge badge-primary">황룡상 침구학술 고증</span>
+        <span class="badge badge-emerald">실증 경맥발생학</span>
+        <span class="badge badge-amber">임상 프로토콜</span>
+      </div>
+      <h1>팔사(八邪)·팔풍(八風)의 자침 순서와 임상 치료 기전에 관한 학술 고증 보고서</h1>
+      <div class="meta-info">
+        <div><strong>분석 프레임워크:</strong> 황룡상 3단계 프로토콜 (분석 ➔ 평가 ➔ 기술)</div>
+        <div><strong>주요 대상 혈위:</strong> 팔사(EX-UE9, 8穴), 팔풍(EX-LE10, 8穴)</div>
+        <div><strong>핵심 쟁점:</strong> 십이경맥 유주 순서론 vs 사지말단 다발성 국소 자극론</div>
+      </div>
+    </header>
+
+    <!-- Executive Summary Callout -->
+    <div class="callout-hero">
+      <h2>📌 Executive Summary (핵심 결론)</h2>
+      <p>
+        십이경맥의 유주 순서나 음양 교차 방향을 고려하여 자침 순서를 정하는 것은 후대(명·청대)에 덧씌워진 <strong>'사변적(思辨的) 도식화'</strong>에 불과하며, 실증적인 득기(得氣) 유도나 치료 시너지와는 무관합니다.<br><br>
+        팔사·팔풍의 본질은 사지 말단 고유신경·혈관망에 대한 <strong>'다발성 국소 자극(Multi-point Stimulation)'을 통한 공간적 가중(Spatial Summation)과 축삭 반사(Axon Reflex)</strong>에 있으므로, 자침 순서보다는 <strong>정확한 해부학적 층차 취혈 및 압통·종창 등 실증적 병변 반응점 우선 자극</strong>이 치료의 핵심입니다.
+      </p>
+    </div>
+
+    <!-- Myth vs Fact Grid -->
+    <div class="grid-2">
+      <div class="compare-card myth">
+        <h3>❌ 후대의 사변적 도식 (관념론)</h3>
+        <ul>
+          <li>12경맥 순환 유주선에 억지로 배속시킴</li>
+          <li>1지→5지, 음경→양경 순서 미준수 시 효과 반감 주장</li>
+          <li>원시 문헌적 근거가 없는 명·청대식 사변화</li>
+        </ul>
+      </div>
+      <div class="compare-card fact">
+        <h3>✅ 황룡상 실증주의 & 현대 신경생리학</h3>
+        <ul>
+          <li>독립된 지간 반응점(압통·락맥)에서 기원한 기혈</li>
+          <li>8혈 동시 자극을 통한 공간적 가중(Spatial Summation)</li>
+          <li>축삭반사(Axon reflex)를 통한 말초 미세순환 즉각 개방</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1단계: 분석 -->
+    <section class="section-card">
+      <h2 class="section-title"><span class="step-tag">1단계</span> 분석 (Historical & Textual Analysis)</h2>
+      <p><strong>팔사·팔풍의 문헌 층차와 발생학적 기원</strong></p>
+      
+      <div class="mermaid-box">
+        <pre class="mermaid">
+timeline
+    title 팔사·팔풍(八邪·八風)의 문헌 층차 변천사
+    선진~한대 (영추·명당경) : 사지말단 십이정혈·형혈 중심 : 모자(毛刺)·반자(半刺)·락자(絡刺) 원형
+    수당대 (천금요방·외대비요) : 손사막의 《천금요방》에서 '팔풍(八風)' 정식 명명 : 각기(脚氣)·족배종통·두풍 치료의 독립 수혈군 확립
+    송금원대 (동인도경·자생경) : 손가락 사이 개별 기혈(대골공·중도 등) 집적 : 지간(指間) 국소 자극의 임상 표준화
+    명청대 (의학강목·침구대성) : 누영 《의학강목》에서 '팔사(八邪)'로 8혈 정형화 : 12경맥 환류설에 억지 배속하는 사변화 시작
+        </pre>
+      </div>
+
+      <div class="principle-list">
+        <div class="principle-item">
+          <div class="principle-num">01</div>
+          <div class="principle-content">
+            <h4>한대(漢代) 이전의 치료 원형: 말초 락자(絡刺)와 국소 배혈</h4>
+            <p>《황제내경·영추》 관침편 단계에서는 손발가락 사이 혈자리들이 12경맥의 순환 궤도에 종속되지 않았으며, 사지 말단의 비증(痺證)·열독(熱毒)을 다스리기 위해 지간 락맥을 직접 점자출혈(點刺出血)시키는 국소 요법이 원형이었습니다.</p>
+          </div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-num">02</div>
+          <div class="principle-content">
+            <h4>당대(唐代) 《천금요방》의 팔풍(八風) 독립 정립</h4>
+            <p>손사막은 《비급천금요방》 권30에서 족배종통과 각기, 두풍을 다스리기 위해 발가락 사이 8개 혈을 '팔풍'이라 명명하며 독립된 수혈군으로 최초 확립하였습니다.</p>
+          </div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-num">03</div>
+          <div class="principle-content">
+            <h4>명대(明代) 《의학강목》의 팔사(八邪) 체계화</h4>
+            <p>명대 누영의 《의학강목》과 양계주의 《침구대성》에서 손등 쪽 제1~5 중수골 두 사이 8개 혈을 '팔사'로 묶어 정형화하였습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2단계: 평가 -->
+    <section class="section-card">
+      <h2 class="section-title"><span class="step-tag">2단계</span> 평가 (Critical Historiographical Evaluation)</h2>
+      <p><strong>'십이경맥 유주 순서 자침론'에 대한 학술사적 비판 및 생리적 기전</strong></p>
+
+      <blockquote>
+        "수혈(Acupoint)은 본래 임상적으로 검증된 독립된 치료점(반응점)이 먼저 발견된 것이며, 12경맥의 끝없는 순환선(유주 도식)은 한대 이후 이론적 통일성과 음양오행적 완결성을 맞추기 위해 사변적으로 구축된 이론 모델이다. 따라서 수혈의 효능을 경맥 유주선에 억지로 종속시키거나 순서를 규정하는 것은 본말이 전도된 관념적 사변이다."
+        <br>— <strong>황룡상 교수 (《중국침구학술사대강》)</strong>
+      </blockquote>
+
+      <div class="mermaid-box">
+        <pre class="mermaid">
+flowchart LR
+    subgraph Stimulation ["8혈 동시 자극"]
+        N1["고유지신경 / 배측지신경 자극"]
+        V1["미세혈관 총 및 지간 인대 긴장 해소"]
+    end
+
+    subgraph Peripheral ["말초 반응 (Axon Reflex)"]
+        N1 --> P1["Substance P, CGRP 국소 분비"]
+        P1 --> P2["모세혈관 확장 & 혈류량 수배 증가"]
+    end
+
+    subgraph Central ["중추/척수 반사 (Spatial Summation)"]
+        N1 --> C1["다발성 구심성 C/Aδ 신경 신호 동시 입력"]
+        C1 --> C2["척수 후각(Dorsal Horn) 광역 탈분극"]
+        C2 --> C3["하행성 통증 억제계(DNIC) 활성화"]
+    end
+
+    Stimulation --> Peripheral
+    Stimulation --> Central
+        </pre>
+      </div>
+
+      <div class="grid-2">
+        <div class="compare-card fact">
+          <h3>1. 공간적 가중 (Spatial Summation)</h3>
+          <p>8개 혈자리에 침이 연속적으로 유침되면, 손발가락 끝의 고유지신경 분지들이 동시에 구심성 신경 신호를 척수로 전달하여 단일 혈위 자극 대비 압도적인 척수 후각 탈분극 및 광역 중추 진통 효과를 유도합니다.</p>
+        </div>
+        <div class="compare-card fact">
+          <h3>2. 축삭 반사 (Axon Reflex) & 미세순환</h3>
+          <p>침 자극이 국소 C-신경섬유 말단에서 CGRP와 Substance P 분비를 유발하여 모세혈관을 급격히 확장합니다. 이는 순서대로 흐르는 것이 아니라 8개 지간 전체에서 동시다발적인 미세순환 네트워크를 개방합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3단계: 기술 -->
+    <section class="section-card">
+      <h2 class="section-title"><span class="step-tag">3단계</span> 기술 (Definitive Description & Modern Clinical Synthesis)</h2>
+      <p><strong>실증적 정혈(正穴)과 표준 임상 시술 프로토콜</strong></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>혈군</th>
+              <th>표준 취혈 체위</th>
+              <th>해부학적 랜드마크</th>
+              <th>권장 침향 및 심도</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>팔사 (八邪)</strong><br><small>EX-UE9, 8穴</small></td>
+              <td>가볍게 주먹을 쥔 자세<br>(半握拳)</td>
+              <td>손등 쪽 제1~5 중수골 소두(Metacarpal head) 사이 오목한 적백육제 경계</td>
+              <td>손목 방향으로 사자(斜刺) 0.3~0.5촌<br>(골간근 및 지간신경 부위)</td>
+            </tr>
+            <tr>
+              <td><strong>팔풍 (八風)</strong><br><small>EX-LE10, 8穴</small></td>
+              <td>발가락을 편 자연스러운 자세<br>(족저 수평)</td>
+              <td>발등 쪽 제1~5 족지간 봉선(Web space) 끝 함요처 적백육제</td>
+              <td>족배 방향으로 사자(斜刺) 0.3~0.5촌<br>(지간인대 관통 회피)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin: 1.5rem 0 1rem; font-size: 1.15rem; color: var(--text-main);">임상 자침 순서의 3대 실증 결정 원칙</h3>
+      
+      <div class="principle-list">
+        <div class="principle-item">
+          <div class="principle-num">1원칙</div>
+          <div class="principle-content">
+            <h4>병변 및 압통점 우선 (以痛爲腧, 察其反應)</h4>
+            <p>8개 혈위 중 눌렀을 때 가장 통증이 심하거나 종창·결절·냉감이 두드러진 지간 부위를 제1순위로 자침하여 주(主) 병소의 신경 반사를 선제적으로 유도합니다.</p>
+          </div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-num">2원칙</div>
+          <div class="principle-content">
+            <h4>시술자의 인체공학적 조작성 (Ergonomic Efficiency)</h4>
+            <p>환자의 손발을 편안히 지지한 상태에서 시술 동선이 꼬이지 않도록 외측(요측/비골측)에서 내측으로 자연스럽게 순차 자입하여 시술의 정확도를 확보합니다.</p>
+          </div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-num">3원칙</div>
+          <div class="principle-content">
+            <h4>다혈 유침과 동시 자극 (Simultaneous Multi-point Excitation)</h4>
+            <p>8개 혈위를 모두 신속히 자침한 후 전침(EA) 통전 또는 고른 염전 수기를 통해 사지 말단 전체의 신경 탈분극과 혈류 확장을 동시에 유지합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>본 보고서는 황룡상 교수의 《침구수혈통고》, 《중국침구학술사대강》, 《경맥이론의 발견과 재해석》 및 고전자료에 근거하여 작성되었습니다.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

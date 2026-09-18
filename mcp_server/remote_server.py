@@ -151,6 +151,20 @@ MCP_TOOLS = [
         }
     },
     {
+        "name": "get_academic_paper",
+        "description": "황룡상 교수의 42편 전수 학술논문 중 지정된 번호(01~42) 또는 제목에 해당하는 논문 전문을 원격 조회합니다.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "paper_id_or_title": {
+                    "type": "string",
+                    "description": "논문 번호(예: '01', '13', '42') 또는 논문 제목 키워드(예: '경락학설의 유래', '五关', '明堂经')"
+                }
+            },
+            "required": ["paper_id_or_title"]
+        }
+    },
+    {
         "name": "get_scholar_framework",
         "description": "황룡상 침구학술사의 5대 핵심 공리 및 3단계 분석-평가-기술(Analysis-Evaluation-Description) 프로토콜 지침을 반환합니다.",
         "inputSchema": {
@@ -159,6 +173,40 @@ MCP_TOOLS = [
         }
     }
 ]
+
+
+def get_remote_paper(paper_id_or_title):
+    """Retrieve full text of a paper from remote master DB."""
+    text = fetch_github_file(CORPUS_FILES["논문집_전체"])
+    if not text:
+        return "원격 논문집 DB를 로드할 수 없습니다."
+
+    query_str = str(paper_id_or_title).strip()
+
+    # If numeric index given
+    if query_str.isdigit():
+        idx_pattern = f"# [{int(query_str):02d}]"
+        pos = text.find(idx_pattern)
+        if pos != -1:
+            # Find next paper start
+            next_idx = f"# [{int(query_str)+1:02d}]"
+            next_pos = text.find(next_idx, pos + len(idx_pattern))
+            if next_pos != -1:
+                return text[pos:next_pos].strip()
+            return text[pos:].strip()
+
+    # Search by title/keyword in paper headers
+    pattern = re.compile(rf"# \[\d{{2}}\].*?{re.escape(query_str)}.*", re.IGNORECASE)
+    match = pattern.search(text)
+    if match:
+        pos = match.start()
+        next_pattern = re.compile(r"\n# \[\d{2}\]")
+        next_match = next_pattern.search(text, pos + 10)
+        if next_match:
+            return text[pos:next_match.start()].strip()
+        return text[pos:].strip()
+
+    return f"해당 논문을 찾을 수 없습니다. (검색어: {query_str})\n01~42 사이의 논문 번호 또는 키워드를 입력해 주세요."
 
 
 def handle_tool_call(tool_name, arguments):
@@ -184,6 +232,10 @@ def handle_tool_call(tool_name, arguments):
             out.append(f"### [{i}] 출전: {res['source']} (위치: {res['position']})")
             out.append(f"> ... {res['snippet']} ...\n")
         return "\n".join(out)
+
+    elif tool_name == "get_academic_paper":
+        paper_id_or_title = arguments.get("paper_id_or_title", "")
+        return get_remote_paper(paper_id_or_title)
 
     elif tool_name == "get_scholar_framework":
         content = fetch_github_file("skill/SKILL.md")
